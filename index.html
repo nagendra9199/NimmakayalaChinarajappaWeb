@@ -2,13 +2,17 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
 
 
-
+          body{
+            overflow-x: hidden;
+          }
 
             
             .header{
@@ -567,7 +571,8 @@ img {vertical-align: middle;}
                 justify-content: space-between;
             }
             .wid{
-              width:100%;
+              max-width:100%;
+              
             }
 
             @media screen and (max-width: 600px) {
@@ -580,7 +585,7 @@ img {vertical-align: middle;}
                 .dropdown button{
                     border-radius:5px;
                     box-shadow: 2px 2px 5px black;
-                    margin-right:180px;
+                    margin-right:10px;
                     
                 }
                 .dropdown-content{
@@ -683,6 +688,13 @@ img {vertical-align: middle;}
                   border-color: black;
                   border-radius:20px;
                 }
+                .social-icons-flex{
+                  display:flex;
+                  flex-direction: column;
+                  position: fixed;
+                  top:20%;
+                  z-index: 1;
+              }
 
 
             }
