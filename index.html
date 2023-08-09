@@ -4,8 +4,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
-    
+
+
+
+
+            
             .header{
                 background-color:transparent;
                 padding:5px;
@@ -83,9 +88,9 @@
                 border-radius:50%;
             }
             .dropdown {
-  position: relative;
-  display: none;
-}
+              position: relative;
+              display: none;
+            }
 
 /* Dropdown button */
 .dropdown button {
@@ -230,6 +235,10 @@ img {vertical-align: middle;}
 }
 .biography-quote{
   font-size:15px;
+}
+.para{
+  font-weight:bold;
+  padding-left:490px;
 }
 .biography-background{
   display: flex;
@@ -558,7 +567,123 @@ img {vertical-align: middle;}
                 justify-content: space-between;
             }
 
+            @media screen and (max-width: 600px) {
+                .nav{
+                  display:none;
+                }
+                .dropdown{
+                    display: inline-block;
+                }
+                .dropdown button{
+                    border-radius:5px;
+                    box-shadow: 2px 2px 5px black;
+                    
+                }
+                .dropdown-content{
+                    background-color: #9ab7cc;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    color:black;
+                    border-radius:10px;
+                    margin-top:10px;
+                }
+                .biography-container{
+                    background-color: #cddfdb;
+                    display: inline-block;
+                    width:100%;
+                    padding: 20px;
+                    font-family:poppins;
+                    justify-content: center;
+                    height:auto;
+                    font-size:10px;
+                    
+                }
+                .biography-flex-card{
+                  display: flex;
+                  justify-content: center;
+                }
+                .biography-image-container img{
+                    height:30vh;
+                    padding-right: 30px;
+                    transform: scale(1.2);
+                }
+                .biography-card{
+                  background-color: #ceb8a05e;
+                  width: 90%;
+                  border-radius: 10px;
+                  padding-top: 10px;
+                  justify-content: center;
+                }
+                .biography-quote{
+                  font-size:10px;
+                }
+                .para{
+                  padding-left:0px;
+                }
+                .biography-background{
+                  display: flex;
+                  flex-direction: column;
+                }
+                .biography-image{
+                  height:40vh;
+                  border-radius:10px;
+                  margin-top:10px;
+                  box-shadow: 2px 2px 12px black;
+                }
+                .biography-background-flex{
+                  background-color: #f3f7f8;
+                  position: relative;
+                  padding:5px;
+                  
+                }
+                .biography-head{
+                  padding:8px;
+                }
+                .background-image{
+                  background-image: url("images/bg3.jpg");
+                }
+                .horigental-red-line{
+                  height:5px;
+                  background-color:red;
+                  width:100px;
+                  margin-top:40px;
+                  margin-right:10px;
 
+                }
+                .blanck{
+                  background-color: #cddfdb;
+                  height:100px;
+                  width:200px;
+                  border-radius:90px;
+                  margin:10px;
+                }
+                .biography-cards-flex{
+                  display: flex;
+                  margin:20px;
+                }
+                .biography-head-para{
+                  width:50%;
+                }
+                .circle{
+                  height:30px;
+                  width:30px;
+                  background-color: #cddfdb;
+                  border-radius:50px;
+                  margin-top:27px;
+                  margin-right:15px;
+                  box-shadow:0px 0px 10px 1px  rgb(182, 178, 178);
+                }
+                .btn{
+                  background-color: transparent;
+                  display: flex;
+                  justify-content: flex-end;
+                  border-color: black;
+                  border-radius:20px;
+                }
+
+
+            }
+
+            
   
 
 
@@ -644,7 +769,7 @@ img {vertical-align: middle;}
                 <div class="horigental-red-line" style="margin-top: 0px; margin-left:30px;"></div>
                 <div class="biography-quote">
                     <p>A leader being a good listener is absolutely critical to being a good leader. You have to listen to the people who are on the front line.</p>
-                    <p style="padding-left:490px; font-weight: bold;">-N Chinarajappa</p>
+                    <p class="para">-N Chinarajappa</p>
                 </div>
                 </div>
                 <div class="biography-image-container">
@@ -1122,6 +1247,8 @@ changeButtonA.addEventListener('click', () => {
     });
 });
 
+  
+
 
 
 
@@ -1155,7 +1282,14 @@ changeButtonA.addEventListener('click', () => {
             }
 
 
-
+            function toggleDropdown() {
+            var dropdownContent = document.getElementById("myDropdown");
+            if (dropdownContent.style.display === "block") {
+                dropdownContent.style.display = "none";
+            } else {
+                dropdownContent.style.display = "block";
+            }
+            } 
 
 
 
