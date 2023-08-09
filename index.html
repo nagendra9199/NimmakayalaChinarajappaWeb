@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <style>
-
 
           body{
             overflow-x: hidden;
           }
+          
+      
 
             
             .header{
@@ -27,6 +27,7 @@
                 width: 100%;
                 z-index: 100;
                 height:100px;
+                overflow-x: none;
                 
 
             }
@@ -92,8 +93,10 @@
                 border-radius:50%;
             }
             .dropdown {
-              position: relative;
-              display: none;
+             
+              display:none;
+              position:fixed;
+              right:100px;
             }
 
 /* Dropdown button */
@@ -104,14 +107,16 @@
   font-size: 16px;
   border: none;
   cursor: pointer;
-  margin-left:-90px;
+
   
 }
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
-  margin-left:-140px;
+  position: fixed;
+  
+ 
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -215,7 +220,6 @@ img {vertical-align: middle;}
     background-color: #cddfdb;
     display: inline-block;
     width:100%;
-    padding: 50px;
     font-family:poppins;
     justify-content: center;
     height:100vh;
@@ -224,11 +228,10 @@ img {vertical-align: middle;}
 .biography-flex-card{
   display: flex;
   justify-content: center;
+  
 }
 .biography-image-container img{
     height:50vh;
-    padding-right: 90px;
-    transform: scale(1.3);
 }
 .biography-card{
   background-color: #ceb8a05e;
@@ -465,7 +468,7 @@ img {vertical-align: middle;}
     margin: 0 auto;
     padding: 20px;
     margin-top: -60px;
-    margin-left: 100px;;
+    margin-left: 100px;
     gap:20px;
 }
 
@@ -487,9 +490,6 @@ img {vertical-align: middle;}
 
 .buttons-1 {
         position: relative;
-        top: 15px;
-        right:-50%;
-        ;
       }
 .buttons-1 button {
         display: inline-block;
@@ -576,6 +576,12 @@ img {vertical-align: middle;}
             }
 
             @media screen and (max-width: 600px) {
+
+
+              body{
+                width:100vw;
+                overflow-x: hidden;
+              }
                 .nav{
                   display:none;
                 }
@@ -585,7 +591,7 @@ img {vertical-align: middle;}
                 .dropdown button{
                     border-radius:5px;
                     box-shadow: 2px 2px 5px black;
-                    margin-right:150px;
+                    margin-left:-150px;
                     
                 }
                 .dropdown-content{
@@ -597,7 +603,6 @@ img {vertical-align: middle;}
                 }
                 .biography-container{
                     background-color: #cddfdb;
-                    display: inline-block;
                     width:100%;
                     padding: 20px;
                     font-family:poppins;
@@ -608,12 +613,11 @@ img {vertical-align: middle;}
                 }
                 .biography-flex-card{
                   display: flex;
-                  justify-content: center;
+
                 }
                 .biography-image-container img{
                     height:30vh;
-                    padding-right: 30px;
-                    transform: scale(1.2);
+                   
                 }
                 .biography-card{
                   background-color: #ceb8a05e;
@@ -623,6 +627,15 @@ img {vertical-align: middle;}
                   justify-content: center;
                 }
                 .biography-quote{
+                  font-size:10px;
+
+                }
+                .biography-head-para p{
+                  width:200px;
+                  padding-top:25px;
+                  margin-left:-50px
+                }
+                .biography-head-para h1{
                   font-size:10px;
                 }
                 .para{
@@ -640,7 +653,6 @@ img {vertical-align: middle;}
                 }
                 .biography-background-flex{
                   background-color: #f3f7f8;
-                  position: relative;
                   padding:5px;
                   
                 }
@@ -697,7 +709,13 @@ img {vertical-align: middle;}
               }
               body{
                 overflow-x: hidden;
+                
+                
               }
+              .lat{
+                display: none;
+              }
+              
 
 
             }
@@ -709,9 +727,8 @@ img {vertical-align: middle;}
         </style>
     </head>
     <body>
-        <div class="wid">
 
-        <div class="header">
+        <div class="header" style="width: 100%;">
 
                 <div class="logo">
                     <img src="images\logo.png">
@@ -744,12 +761,11 @@ img {vertical-align: middle;}
                   </div>
 
                 </div>
-            </div>
 
 
 
             
-            <div class="slideshow-container">
+            <div class="slideshow-container" style="width: 100%;">
               <div class="mySlides1">
                 <img src="images\slider11.jpg" style="width:100%">
                 <div class="social-icons-flex">
@@ -759,7 +775,7 @@ img {vertical-align: middle;}
                 </div>
               </div>
             
-              <div class="mySlides1 background-image">
+              <div class="mySlides1 background-image" style="width: 100%;">
                 <img src="images\DSC_0613.jpg" style="width:100%">
                 <div class="social-icons-flex">
                 <a href="#" class="fa fa-facebook"></a>
@@ -897,6 +913,7 @@ img {vertical-align: middle;}
               </div>           
 
             </div>
+            <div class="lat">
             <div class="latest-bg">
               <h1>LATEST NEWS</h1>
               <div class="horigental-red-line-latest"></div>
@@ -1056,7 +1073,7 @@ img {vertical-align: middle;}
             </div>
               </div>  
             </div>
-
+          </div>
 
 
 
