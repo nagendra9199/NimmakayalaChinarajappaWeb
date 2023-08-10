@@ -350,7 +350,7 @@ img {vertical-align: middle;}
 }
 
 .image-container {
-    display: inline-block; /* Adjust display mode as needed */
+   /* Adjust display mode as needed */
     position: relative;
 }
 
@@ -379,6 +379,9 @@ img {vertical-align: middle;}
     margin-bottom:-10px;
 }
 .latest-gallery-cards{
+  max-width:100%;
+}
+.latest-gallery-cards p{
   width:26.78vw;
   margin-left:20px;
   background-color: #E5EDFF;
@@ -388,8 +391,10 @@ img {vertical-align: middle;}
   font-size:12px;
   padding:10px;
   text-align: start;
-  margin-bottom:10px;
+
 }
+
+
 .date-card{
   background-color: red;
   height:30px;
@@ -575,6 +580,11 @@ img {vertical-align: middle;}
               max-width:100%;
               
             }
+            .spanShow{
+              display: none;
+            }
+            
+            
 
             @media screen and (max-width: 600px) {
 
@@ -583,6 +593,25 @@ img {vertical-align: middle;}
                 width:100vw;
                 overflow-x: hidden;
               }
+              .logo{
+                
+                width:130px;
+                padding-top: 15px;
+                margin-left:0px;
+                padding-left:10px;
+                
+                
+
+            
+            }
+            .heading{
+                font-size:10px;
+                color:#0c0c0c;
+                font-family: Arial, Helvetica, sans-serif;
+                color:#070707;
+                margin-top:20px
+            }
+            
                 .nav{
                   display:none;
                 }
@@ -795,11 +824,12 @@ img {vertical-align: middle;}
                 color:rgb(12, 12, 12);
                 font-family:poppins;
                 font-size:12px;
-                padding:8px;
+                padding-left:8px;
                 text-align: start;
                 margin-bottom:10px;
                 overflow: hidden;
               }
+              
               .date-card{
                 background-color: red;
                 height:15px;
@@ -922,8 +952,7 @@ img {vertical-align: middle;}
                   }
                   .footer-container{
                 background-image: url("images/footer (1).jpg");
-                height:auto;
-                width:100%;
+                background-size: cover;
                 padding:15px;
                 font-family:arial;
                 font-weight:normal;
@@ -987,7 +1016,6 @@ img {vertical-align: middle;}
             }
 
             
-  
 
 
         </style>
@@ -1007,7 +1035,7 @@ img {vertical-align: middle;}
                 </div>
                 <div class="nav">
                     <ul class="navbar">
-                        <li class="nav-items"><a href="#homeContainer" class="list">Home</a></li>
+                        <li class="nav-items"><a href="#slideshowContainer" class="list">Home</a></li>
                         <li class="nav-items"><a href="#biographyContainer" class="list">Biography</a></li>
                         <li class="nav-items"><a href="#latestContainer" class="list">latest Activities</a></li>
                         <li class="nav-items"><a href="#galleryContainer" class="list">Gallery</a></li>
@@ -1018,9 +1046,9 @@ img {vertical-align: middle;}
                 <div class="dropdown">
                     <button onclick="toggleDropdown()">Menu</button>
                     <div id="myDropdown" class="dropdown-content">
-                      <a href="#homeContainer">Home</a>
+                      <a href="#slideshowContainer">Home</a>
                       <a href="#biographyContainer">Biography</a>
-                      <a href="#latestMobileContainer">Latest Activities</a>
+                      <a href="#latestContainer">Latest Activities</a>
                       <a href="#galleryMobileContainer">Gallery</a>
                       <a href="#socialContainer">Social Media</a>
                     </div>
@@ -1031,7 +1059,7 @@ img {vertical-align: middle;}
 
 
             
-            <div class="slideshow-container" style="width: 100%;">
+            <div class="slideshow-container" id="slideshowContainer" style="width: 100%;">
               <div class="mySlides1">
                 <img src="images\slider11.jpg" style="width:100%">
                 <div class="social-icons-flex">
@@ -1063,7 +1091,7 @@ img {vertical-align: middle;}
               <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
             </div>
 
-            <div class="biography-container">
+            <div class="biography-container" id="biographyContainer">
               <div class="biography-flex-card">
                 <div>
                 <h1>BIOGRAPHY</h1>
@@ -1106,13 +1134,13 @@ img {vertical-align: middle;}
                   <p>Nimmakayala Chinna Rajappa was born on [date] in [place].
                      From an early age, he displayed a keen interest in social
                       welfare and politics, nurturing a deep-seated desire to
-                       serve his community. Rajappa completed his education at
+                       serve his community. <span class="spanShow" id="spanShow">Rajappa completed his education at
                         [name of institution], where he honed his leadership
                          skills and gained valuable insights into governance
-                          and public administration. </p>
+                          and public administration.</span> </p>
 
                     <div class="btn">
-                      <button id="btn">Read More</button>
+                      <button id="btn1">Read More</button>
                     </div>
                   </div>
                   <div class="blanck"></div>
@@ -1125,11 +1153,11 @@ img {vertical-align: middle;}
                   <div class="biography-head-para">
                   <h1>Political Journey and Contributions</h1>
                   <p>Joined Telugu Desam Party and swiftly rose through the ranks,
-                     earning the trust and admiration of his constituents. Rajappa's
+                     earning the trust and admiration of his constituents. <span class="spanShow" id="spanShow2">Rajappa's
                       political career spans several significant roles and 
-                      accomplishments.</p>
+                      accomplishments.</span></p>
                     <div class="btn">
-                      <button id="btn">Read More</button>
+                      <button id="btn2">Read More</button>
                     </div>
                   </div>
                   <div class="circle"></div>
@@ -1143,10 +1171,10 @@ img {vertical-align: middle;}
                   <div class="biography-head-para">
                   <h1>Commitment to Rural Development</h1>
                   <p>Nimmakayala Chinna Rajappa's unwavering commitment to rural development
-                     is noteworthy. He recognized the importance of empowering rural communities
-                      and worked tirelessly to address their specific needs.</p>
+                     is noteworthy. <span class="spanShow" id="spanShow3">He recognized the importance of empowering rural communities
+                      and worked tirelessly to address their specific needs.</span></p>
                     <div class="btn">
-                      <button id="btn">Read More</button>
+                      <button id="btn3">Read More</button>
                     </div>
                   </div>
                   <div class="blanck"></div>
@@ -1160,12 +1188,12 @@ img {vertical-align: middle;}
                   <h1>Ministerial Positions</h1>
                   <p>Rajappa was entrusted with ministerial responsibilities. He served as MLC
                      from 2007 to 2013. where he implemented progressive 
-                     policies and spearheaded initiatives that contributed to
+                     policies and spearheaded <span class="spanShow" id="spanShow4">initiatives that contributed to
                       the overall growth of the state. His tenure witnessed 
                       significant advancements in sectors and brought about 
-                      positive transformations.</p>
+                      positive transformations.</span></p>
                     <div class="btn">
-                      <button id="btn">Read More</button>
+                      <button id="btn4">Read More</button>
                     </div>
                   </div>
                   <div class="circle"></div>
@@ -1179,62 +1207,12 @@ img {vertical-align: middle;}
               </div>           
 
             </div>
-            <div class="latest-bg">
+            <div class="latest-bg" id="latestContainer">
               <h1>LATEST NEWS</h1>
               <div class="horigental-red-line-latest"></div>
             </div>            
             <div class="grid-container">
-              <div class="grid-item">
-                <div class="image-container">
-                  <div class="image-with-rectangle">
-                                    
-                <img src="images\rajappacy.jpg" class="grid-image"/>
-                <div class="date-position">
-                <div class="date-card"><p>16 Dec 2018</p></div>
-                <div class="date-card-2"></div>
-                </div>
-                <div class="latest-gallery-cards">
-                  <p> Honourable Deputy Chief Minister N.Chinarajappa and District collector conducted review meeting on Phethai Cyclone with District officers at Collectorate Kakinada</p>
-                  <a href="">Read More</a>
-                </div>
-              </div>
-            </div>
-              </div>
-              <div class="grid-item">
-                <div class="image-container">
-                  <div class="image-with-rectangle">
-                                    
-                <img src="images\dc-Cover-5labqo4vq8014i14i34anv2eg5-20160505063829.Medi.jpeg" class="grid-image"/>
-                <div class="date-position">
-                <div class="date-card"><p>05 May 2016</p></div>
-                <div class="date-card-2"></div>
-                </div>
-                <div class="latest-gallery-cards">
-                  <p>The Deputy Chief Minister said that the government was taking all necessary measures to tackle severe drought conditions in the state. About 17,000 chalivendrams were launched to provide butter milk and water free of cost. Drinking water would be supplied in tankers for habitations facing deep depletion of ground water in the state, he said.</p>
-                  <a href="">Read More</a>
-                </div>
-              </div>
-            </div>
-              </div>
-              <div class="grid-item">
-                <div class="image-container">
-                  <div class="image-with-rectangle">
-                                    
-                <img src="images\police.jpg" class="grid-image"/>
-                <div class="date-position">
-                <div class="date-card"><p>31 Jan 2019</p></div>
-                <div class="date-card-2"></div>
-                </div>
-                <div class="latest-gallery-cards">
-                  <p>All police stations in Vizag will be modernised with a funding of Rs 75 crores,
-                     Andhra Pradesh Home and Deputy Chief Minister Nimmakayala Chinarajappa informed. 
-                     The Minister laid foundation stones for five new police buildings in Vizag on 
-                     Tuesday.</p>
-                     <a href="">Read More</a>
-                </div>
-              </div>
-            </div>
-              </div> 
+             
               <div class="grid-item">
                 <div class="image-container">
                   <div class="image-with-rectangle">
@@ -1245,11 +1223,10 @@ img {vertical-align: middle;}
                 <div class="date-card-2"></div>
                 </div>
                 <div class="latest-gallery-cards">
-                  <p>Speaking on the occasion, he said that the government had spent 
-                    Rs 23 lakh on construction of each quarters. For the first time, 
+                  <p class="over">Speaking on the occasion, he said that the government had spent 
+                    Rs 23 lakh on construction of each quarters. For the first time,
                     the houses were build in an extent of 1,030 feet area as against 
                     usual 500 feet area.</p>
-                    <a href="">Read More</a>
                 </div>
               </div>
             </div>
@@ -1264,11 +1241,10 @@ img {vertical-align: middle;}
                 <div class="date-card-2"></div>
                 </div>
                 <div class="latest-gallery-cards">
-                  <p>The Deputy Chief Minister, Minister for Revenue, Stamps &
+                  <p class="over">The Deputy Chief Minister, Minister for Revenue, Stamps &
                      Registration Shri K.E. Krishna Murthy and the Deputy Chief 
                      Minister & Home Minister Shri N. Chinarajappa lighting the 
                      lamp at the Public Information Campaign</p>
-                     <a href="">Read More</a>
                 </div>
               </div>
             </div>
@@ -1277,14 +1253,13 @@ img {vertical-align: middle;}
                 <div class="image-container">
                   <div class="image-with-rectangle">
                                     
-                <img src="images\48371464_2315959675103700_6963257424182509568_o.jpg" class="grid-image"/>
+                <img src="images\rgm.jpg" class="grid-image"/>
                 <div class="date-position">
-                <div class="date-card"><p>11 Sep 2022</p></div>
+                <div class="date-card"><p>09 Oct 2015</p></div>
                 <div class="date-card-2"></div>
                 </div>
                 <div class="latest-gallery-cards">
-                  <p>Meeting at Godavari and Gowthami</p>
-                  <a href="">Read More</a>
+                  <p class="over">The Deputy Chief Minister & Home Minister, Shri N. Chinarajappa addressing at the Public Information Campaign, at Yemmiganur, Kurnool district, Andhra Pradesh on October 09, 2015.</p>
                 </div>
               </div>
             </div>
@@ -1293,14 +1268,13 @@ img {vertical-align: middle;}
                 <div class="image-container">
                   <div class="image-with-rectangle">
                                     
-                <img src="images\136749766_496174774700420_1644050917513166079_n.jpg" class="grid-image"/>
+                <img src="images\rajappacy.jpg" class="grid-image"/>
                 <div class="date-position">
-                <div class="date-card"><p>11 Sep 2022</p></div>
+                <div class="date-card"><p>16 Dec 2018</p></div>
                 <div class="date-card-2"></div>
                 </div>
                 <div class="latest-gallery-cards">
-                  <p>Meeting at Godavari and Gowthami</p>
-                  <a href="">Read More</a>
+                  <p class="over"> Honourable Deputy Chief Minister N.Chinarajappa and District collector conducted review meeting on Phethai Cyclone with District officers at Collectorate Kakinada</p>
                 </div>
               </div>
             </div>
@@ -1309,34 +1283,88 @@ img {vertical-align: middle;}
                 <div class="image-container">
                   <div class="image-with-rectangle">
                                     
-                <img src="images\WhatsApp Image 2023-07-28 at 10.03.05 AM (1).jpeg" class="grid-image"/>
+                <img src="images\DOrCqi5XkAI5T_9.jpg" class="grid-image"/>
                 <div class="date-position">
-                <div class="date-card"><p>11 Sep 2022</p></div>
+                <div class="date-card"><p>12 Nov 2017</p></div>
                 <div class="date-card-2"></div>
                 </div>
                 <div class="latest-gallery-cards">
-                  <p>Meeting at Godavari and Gowthami</p>
-                  <a href="">Read More</a>
-                </div>
-              </div>
-            </div>
-              </div>
-              <div class="grid-item">
-                <div class="image-container">
-                  <div class="image-with-rectangle">
-                                    
-                <img src="images\rg-9.JPG" class="grid-image"/>
-                <div class="date-position">
-                <div class="date-card"><p>11 Sep 2022</p></div>
-                <div class="date-card-2"></div>
-                </div>
-                <div class="latest-gallery-cards">
-                  <p>Meeting at Godavari and Gowthami publishing and graphic design learni and </p>
-                  <a href="">Read More</a>
+                  <p class="over">On 12th November 2017, Minister for Home & Deputy Chief Minister, Govt. of Andhra Pradesh  Sri Nimmakayala Chinarajappa Garu Visited Srisaila Devasthanam.</p>
+                  
                 </div>
               </div>
             </div>
               </div>  
+              <div class="grid-item">
+                <div class="image-container">
+                  <div class="image-with-rectangle">
+                                    
+                <img src="images\2017102720.jpg" class="grid-image"/>
+                <div class="date-position">
+                <div class="date-card"><p>27 Oct 2017</p></div>
+                <div class="date-card-2"></div>
+                </div>
+                <div class="latest-gallery-cards">
+                  <p class="over">Dy. CM Shri N.Chinarajappa, Dist Collector and Dist officers participated in the Chief Minister video conference at Collectorate, Kakinada on 27-10-2017.</p>
+                  
+                </div>
+              </div>
+            </div>
+              </div>
+              <div class="grid-item">
+                <div class="image-container">
+                  <div class="image-with-rectangle">
+                                    
+                <img src="images\dc-Cover-5labqo4vq8014i14i34anv2eg5-20160505063829.Medi.jpeg" class="grid-image"/>
+                <div class="date-position">
+                <div class="date-card"><p>05 May 2016</p></div>
+                <div class="date-card-2"></div>
+                </div>
+                <div class="latest-gallery-cards">
+                  <p class="over">The Deputy Chief Minister said that the government was taking all necessary measures to tackle severe drought conditions in the state. About 17,000 chalivendrams were launched to provide butter milk and water free of cost. Drinking water would be supplied in tankers for habitations facing deep depletion of ground water in the state, he said.</p>
+                </div>
+              </div>
+            </div>
+              </div>
+              <div class="grid-item">
+                <div class="image-container">
+                  <div class="image-with-rectangle">
+                                    
+                <img src="images\police.jpg" class="grid-image"/>
+                <div class="date-position">
+                <div class="date-card"><p>31 Jan 2019</p></div>
+                <div class="date-card-2"></div>
+                </div>
+                <div class="latest-gallery-cards">
+                  <p class="over">All police stations in Vizag will be modernised with a funding of Rs 75 crores,
+                     Andhra Pradesh Home and Deputy Chief Minister Nimmakayala Chinarajappa informed. 
+                     The Minister laid foundation stones for five new police buildings in Vizag on 
+                     Tuesday.</span></p>
+                </div>
+              </div>
+            </div>
+              </div> 
+              
+              
+              <div class="grid-item">
+                <div class="image-container">
+                  <div class="image-with-rectangle">
+                                    
+                <img src="images\june143-audio.jpg" class="grid-image"/>
+                <div class="date-position">
+                <div class="date-card"><p>08 June 2017</p></div>
+                <div class="date-card-2"></div>
+                </div>
+                <div class="latest-gallery-cards">
+                  <p class="over">Audio of ‘June 1:43’ was launched by AP Home Minister Nimmakayala Chinarajappa. The film that features Aditya and Richa in the lead roles is being directed by Bhaskr Bantupalli under Aditya Creations banner with Lakshmi as producer. After launching the audio CDs, the minister wished all the best to the film unit members.
+                    On this occasion, Lakshmi said, “Sravan has given excellent music. Besides music, he has given wonderful background score also. Krishna Kanth has penned beautiful lyrics. I was very much impressed by the script narrated by Bhaskar and therefore came forward to produce the film.
+                  </p>
+                  
+                </div>
+              </div>
+            </div>
+              </div>
+              
             </div>
           </div>
 
@@ -1345,7 +1373,7 @@ img {vertical-align: middle;}
 
 
 
-            <div class="gal-main-container-1">
+            <div class="gal-main-container-1" id="galleryContainer">
               <div class="head-gal-1">
   
                   <div class="line-1">
@@ -1549,15 +1577,65 @@ changeButtonA.addEventListener('click', () => {
 });
 
   
+    const btn1=document.getElementById("btn1");
+    const spanShow=document.getElementById("spanShow");
+
+         btn1.addEventListener("click", () => {
+    if (spanShow.style.display === "block") {
+        spanShow.style.display = "none";
+        btn1.textContent = "Read More";
+    } else {
+        spanShow.style.display = "block";
+        btn1.textContent = "Read Less";
+    }
+});
+
+    const btn2=document.getElementById("btn2");
+    const spanShow2=document.getElementById("spanShow2");
+
+         btn2.addEventListener("click", () => {
+    if (spanShow2.style.display === "block") {
+        spanShow2.style.display = "none";
+        btn2.textContent = "Read More";
+    } else {
+        spanShow2.style.display = "block";
+        btn2.textContent = "Read Less";
+    }
+});
+
+
+    const btn3=document.getElementById("btn3");
+    const spanShow3=document.getElementById("spanShow3");
+
+         btn3.addEventListener("click", () => {
+    if (spanShow3.style.display === "block") {
+        spanShow3.style.display = "none";
+        btn3.textContent = "Read More";
+    } else {
+        spanShow3.style.display = "block";
+        btn3.textContent = "Read Less";
+    }
+});
+
+
+    const btn4=document.getElementById("btn4");
+    const spanShow4=document.getElementById("spanShow4");
+
+         btn4.addEventListener("click", () => {
+    if (spanShow4.style.display === "block") {
+        spanShow4.style.display = "none";
+        btn4.textContent = "Read More";
+    } else {
+        spanShow4.style.display = "block";
+        btn4.textContent = "Read Less";
+    }
+});
 
 
 
 
 
-
-
-
-
+            
 
 
 
@@ -1592,6 +1670,10 @@ changeButtonA.addEventListener('click', () => {
             }
             } 
 
+
+
+            
+            
 
 
 
