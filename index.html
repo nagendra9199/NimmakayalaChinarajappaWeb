@@ -538,32 +538,38 @@ img {vertical-align: middle;}
                 font-family:arial;
                 font-weight:normal;
                 margin-top:20px;
+                font-size:20px;
   
             }
             .about-leaders{
-                font-size:10px
+                font-size:15px
             }
             .about-leaders a{
                 text-decoration: none;
                 color:rgb(102, 74, 74);
+                font-size:15px;
             }
             .footer-items-flex{
                 display: flex;
                 justify-content: space-between;
             }
             .links-footer{
-                font-size:10px
+                font-size:15px
             }
             .links-footer a{
                 text-decoration: none;
                 color:rgb(102, 74, 74);
             }
+            .links-footer a{
+              font-size:15px;
+            }
             .contact-footer{
-                font-size:10px;
+                font-size:15px;
             }
             .contact-footer p{
                 text-decoration: none;
                 color:rgb(102, 74, 74);
+                font-size:15px;
             }
             
 
@@ -1053,18 +1059,18 @@ img {vertical-align: middle;}
     </head>
     <body>
 
-        <div class="header" style="width: 100%;">
+        <div class="header" style="width: 100%;" id="myHeader">
 
                 <div class="logo">
                     <img src="images\logo.png">
-                    <h1 class="heading">CHINARAJAPPA
+                    <h1 class="heading" id="head1">CHINARAJAPPA
                         NIMMAKAYALA
                     </h1>
                     
 
                     
                 </div>
-                <div class="nav">
+                <div class="nav" id="conten">
                     <ul class="navbar">
                         <li class="nav-items"><a href="#slideshowContainer" class="list">Home</a></li>
                         <li class="nav-items"><a href="#biographyContainer" class="list">Biography</a></li>
@@ -1096,7 +1102,7 @@ img {vertical-align: middle;}
                 <div class="social-icons-flex">
                 <a href="https://www.facebook.com/people/China-Rajappa-Nimmakayala/100050506418754/" class="fa fa-facebook"></a>
                 <a href="https://twitter.com/ChinarajappaN?t=CYTzsfWDw5kUEean7HAMTA&s=08" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-instagram"></a>
+                <a href="https://instagram.com/chinarajappa_nimmakayala?igshid=MzRlODBiNWFlZA==" class="fa fa-instagram"></a>
                 </div>
               </div>
             
@@ -1105,7 +1111,7 @@ img {vertical-align: middle;}
                 <div class="social-icons-flex">
                 <a href="https://www.facebook.com/people/China-Rajappa-Nimmakayala/100050506418754/" class="fa fa-facebook"></a>
                 <a href="https://twitter.com/ChinarajappaN?t=CYTzsfWDw5kUEean7HAMTA&s=08" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-instagram"></a>
+                <a href="https://instagram.com/chinarajappa_nimmakayala?igshid=MzRlODBiNWFlZA==" class="fa fa-instagram"></a>
                 </div>
               </div>
             
@@ -1114,7 +1120,7 @@ img {vertical-align: middle;}
                 <div class="social-icons-flex">
                 <a href="https://www.facebook.com/people/China-Rajappa-Nimmakayala/100050506418754/" class="fa fa-facebook"></a>
                 <a href="https://twitter.com/ChinarajappaN?t=CYTzsfWDw5kUEean7HAMTA&s=08" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-instagram"></a>
+                <a href="https://instagram.com/chinarajappa_nimmakayala?igshid=MzRlODBiNWFlZA==" class="fa fa-instagram"></a>
                 </div>
               </div>
             
@@ -1509,7 +1515,7 @@ img {vertical-align: middle;}
             </div>
             <div class="contact-footer">
                 <h1>Contact</h1>
-                <p>Email:</p>
+                <p>Ph no: 0852244877</p>
             </div>
             </div>
             <hr/>
@@ -1523,7 +1529,7 @@ img {vertical-align: middle;}
                     <i class="fa fa-twitter"></i>
                   </a>
 
-                  <a class="instagram-1" href="#">
+                  <a class="instagram-1" href="https://instagram.com/chinarajappa_nimmakayala?igshid=MzRlODBiNWFlZA==">
                     <i class="fa fa-instagram"></i>
                   </a>
 
@@ -1676,7 +1682,22 @@ changeButtonA.addEventListener('click', () => {
 });
 
 
+const header = document.getElementById('myHeader');
+const conten = document.getElementById('conten');
+const head1 = document.getElementById("head1")
 
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > conten.offsetTop) {
+        header.style.backgroundColor = '#ffffff';
+        head1.style.color="black"
+        
+    } else {
+        header.style.backgroundColor = 'transparent';
+        head1.style.color="#ffffff"
+    }
+});
 
 
             
