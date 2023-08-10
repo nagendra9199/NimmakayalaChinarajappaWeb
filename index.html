@@ -1,22 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
-
-          body{
-            overflow-x: hidden;
-          }
-          
-      
-
-            
-            .header{
-                background-color:transparent;
+             .header{
+                background-color:#ffffff;
+                background-size: cover;
                 padding:5px;
                 display: flex;
                 flex-direction: row;
@@ -24,10 +17,9 @@
                 position: fixed;
                 top: 0;
                 left: 0;
-                width: 100%;
+                width: 100vw;
                 z-index: 100;
-                height:100px;
-                overflow-x: none;
+                height:100px
                 
 
             }
@@ -35,6 +27,7 @@
                 
                 width:230px;
                 padding-top: 15px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
                 margin-left:30px;
                 padding-left:10px;
                 
@@ -45,10 +38,16 @@
             .heading{
                 font-size:19px;
                 color:#0f0f0f;
-                font-family: Arial, Helvetica, sans-serif;
-                color:#ffffff;
+                text-shadow: 1px 1px #9ab7cc;
             }
-            
+            .off-web{
+                color:#0e0d0d;
+                font-family: sans-serif;
+                font-weight: bold;
+                font-size:15px;
+                padding-bottom: 7px;
+                
+            }
             .navbar{
                 display:flex;
                 flex-direction: row;
@@ -65,8 +64,7 @@
             .list{
                 color:#0c0c0c;
                 text-decoration: none;
-                font-weight: 0px;
-                color:#111111;
+                font-weight: bold;
                 font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
             }
@@ -82,22 +80,100 @@
                 padding-left: 180px;
                 padding-top: 190px;
             }
-            .logo{
-                display: flex;
+            
+            
 
+            
+            .slideshow-container {
+                max-width: 100%;
+                padding-bottom:100px;
+                
+                
             }
-            .logo img{
-                margin-right:10px;
-                width: 4.5em;
-                height:4.5em;
-                border-radius:50%;
+            .animation-container img{
+                transform: scale(1);
+                
             }
-            .dropdown {
-             
-              display:none;
-              position:fixed;
-              right:100px;
+
+            .rajappa-new{
+                max-width: 350px;
+                max-height: 650px;
+                
             }
+.animation-container {
+        width: 100%;
+        height: 100vh;
+        background-image: url("images/bg6.png");
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+    .rajappa-new {
+      opacity: 0;
+      position: relative;
+      bottom: -100px;
+      animation: slideInAndFade 3s forwards;
+      padding-top:120px;
+    }
+    @keyframes slideInAndFade {
+      to {
+        opacity: 1;
+        bottom: 0;
+      }
+    }
+    .quote-container {
+      display: none;
+      position: absolute;
+      
+      transform: translateX(-50%);
+      text-align: center;
+      animation: slideInAndFade 3s forwards;
+      color: #fcf8f8;
+      left:60%;
+      align-self: center;
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 40px;
+      font-weight: bolder;
+      text-shadow: 2px 6px  rgb(7, 7, 7);
+      
+
+      animation: fadeInQuote 1s forwards;
+    }
+    @keyframes fadeInQuote {
+      to {
+        opacity: 1;
+      }
+    }
+    .show-quote {
+      display: block;
+    }
+
+
+
+
+    .logo{
+        display: flex;
+
+    }
+    .logo img{
+        margin-right:10px;
+        width: 4.5em;
+        height:4.5em;
+        border-radius:50%;
+    }
+    .rajappa-new1 {
+        opacity: 0.5;
+        
+    }
+
+
+
+
+    .dropdown {
+  position: relative;
+  display: none;
+}
 
 /* Dropdown button */
 .dropdown button {
@@ -107,16 +183,14 @@
   font-size: 16px;
   border: none;
   cursor: pointer;
-
+  margin-left:-90px;
   
 }
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
-  position: fixed;
-  
- 
+  margin-left:-140px;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -139,481 +213,757 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
+    
 
 
-* {box-sizing: border-box}
-.mySlides1, .mySlides2 {display: none}
-img {vertical-align: middle;}
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 100%;
-  position: relative;
-  margin: auto;
-}
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: rgb(15, 15, 15);
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
 
-/* On hover, add a grey background color */
-.prev:hover, .next:hover {
-  background-color: #f1f1f1;
-  color: black;
-}
 
-.fa {
-  padding: 8px;
-  font-size: 15px;
-  width: 30px;
-  height: 30px;
-  text-align:center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 50%;
+
+
+
+
+
+
+    .el{
+                display:flex;
+                flex-direction:row;
+                margin-top:10px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                line-height:01;
+                color:rgb(90, 86, 86);
+
+            }
+            .el h3 {
+                font-weight: bold;
+                color:rgb(63, 61, 61);
+            }
+                
+            
+           .el-img img{
+
+            box-shadow:1px 1px 20px 6px ;
+            border-radius: 30px;
+            transform: scale(0.8);
+            display: block;
+            position:relative;
+            right:-190%;
+            top:-2%;
   
-}
+         }
+            .el-content{
+                padding:20px;
+                box-shadow: 10px 2px 20px 2px black;
+                border-radius:100px 0px 100px 0px;
+                width: 40vw;
+                height: 22%;
+                position:absolute;
+                
+                top:140%;
+                left: -50%; /* Initially hides the content off-screen to the left */
+                background-color: white;
+                transition: left 1s ease-in-out; 
+                
+            }
+            .el-content1{
+                padding:20px;
+                box-shadow: 10px 2px 20px 2px  black;
+                border-radius:100px 0px 100px 0px;
+                width: 40%;
+                height: 22%;
+                position:absolute;
+                left:60;
+                top:170%;
+                left: -100%; /* Initially hides the content off-screen to the left */
+                background-color: white;
+                transition: left 1.5s ease-in-out; 
+            }
+            .el-content2{
+                padding:20px;
+                box-shadow: 10px 2px 20px 2px  black;
+                border-radius:100px 0px 100px 0px;
+                width: 40%;
+                height: 22%;
+                position:absolute;
+                left:60;
+                top:200%;
+                left: -100%; /* Initially hides the content off-screen to the left */
+                background-color: white;
+                transition:  2s ease-in-out;
+            }
+            .el:hover .el-content {
+            left: 10%; /* Show the content on hover by sliding it from left to right */
+            }
+            .el:hover .el-content1 {
+            left: 10%; /* Show the content on hover by sliding it from left to right */
+            }
+            .el:hover .el-content2 {
+            left: 10%; /* Show the content on hover by sliding it from left to right */
+            }
+            
 
-.fa:hover {
-    opacity: 0.7;
-}
 
-.fa-facebook {
-  background: #3B5998;
-  color: white;
+            .bio-head h1{
+                text-align: center;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color:transparent;
+                font-family: cursive;
+                padding: 10px;
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 5px 5px 5px  rgb(241, 243, 132);
+                
+                background-image: linear-gradient(to bottom,rgb(55, 141, 5) 80%,white);
+            }
+
+
+
+
+
+
+
+
+            .latest-container{
+                background-image: url("images/latest new.jpg");
+                background-size: cover;
+                height:100vh;
+                display: flex;
+                align-items: center;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                overflow-x: scroll;
+                scroll-snap-type: x mandatory;
+                scroll-padding: 24px;
+                border-radius:15px;
+                -ms-overflow-style: none; 
+                scrollbar-width: none;
+                margin-top:60px
+               
+
+            }
+            .latest-container::-webkit-scrollbar{
+                display: none;
+            }
+            .latest-start{
+                color:#4CAF50;
+                padding-left: 20px;
+                
+                
+            }
+            .latest-container h1{
+                color:rgb(12, 12, 12);
+                
+            }
+            .l-image-card{
+                width:20vw;
+                margin:10px;
+                padding: 10px;
+                
+                
+                
+            }
+            .l-image-card h1,p{
+                padding-left: 5px;
+                font-size:18px;
+                
+
+            }
+            .l-image-card p{
+                height:20vh;
+                overflow: hidden;
+                overflow-y: scroll;
+                -ms-overflow-style: none; 
+                scrollbar-width: none;
+            }
+            .l-image-card p::-webkit-scrollbar {
+                display: none;
+            }
+            .l-image-card img{
+                height:40vh;
+                width:20vw;
+                position:relative;
+                border-radius: 10px;
+                padding-bottom:0px;
+            }
+            
+            .latest-description{
+                color:#fff;
+                font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            
+
+
+
+            .hide-container{
+                display: none;
+            }
+
+            .latest-container-mobile{
+                background-image: url("images/latest new.jpg");
+                background-size: cover;
+                height:300px;
+                display: flex;
+                overflow-x: scroll;
+                -ms-overflow-style: none; 
+                scrollbar-width: none;
+                
+                
+                
+            }
+            .latest-container-mobile::-webkit-scrollbar{
+                display: none;
+            }
+            
+            .latest-heading-mobile{
+                font-size:15px;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                height:50px
+                
+            }
+            .l-image-card-mobile{
+                width:35vw;
+                margin:5px;
+                padding: 5px;
+                
+                
+                
+            }
+            .l-image-card-mobile p{
+                height:20vh;
+                overflow: hidden;
+                overflow-y: scroll;
+                -ms-overflow-style: none; 
+                scrollbar-width: none;
+                background-color: #ecf3f2;
+                border-radius: 10px;
+                padding:10px;
+                font-size:15px;
+            }
+            .l-image-card-mobile p::-webkit-scrollbar {
+                display: none;
+            }
+            .l-image-card-mobile img{
+                height:20vh;
+                width:30vw;
+                position:relative;
+                margin-top: 30px;
+                
+                padding-bottom:0px;
+            }
+            
+            .latest-description-mobile{
+                color:#070707;
+                font-size:10px;
+                font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            .space{
+                height:900px;
+                display:none;
+            }
+            .latest-head-mobile{
+                color:#4CAF50;
+                text-align: center;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size:15px;
+            }
+
+
+
+            .gallery-images{
+                height:28vh;
+                width:20vw;
+                border-radius: 10px;
+            }
+            .gallery-para-card{
+                background-color:#ffffff;
+                width:15vw;
+                padding-left: 8px;
+                border-radius:10px;
+                margin:-55px 28px;
+                font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-weight:bold;
+                margin-bottom:20px;
+                box-shadow:1px 1px 15px black;
+                height:150px;
+                display: flex;
+                align-items: center;
+                
+            }
+            .gallery-para-card:hover{
+                
+                background-color: skyblue;
+            
+            }
+
+
+            
+            .gallery-card-container{
+                display: flex;
+                flex-direction: column;
+                padding:10px
+
+            }
+            
+            .gallery-side-line{
+                background-color: blueviolet;
+                height:20px;
+                width:0px;
+                
+            }
+            .gallery-row-flex-container{
+                display: flex;
+                width:100%;
+                justify-content: center;
+            }
+            .gallery-heading{
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size:20px;
+                font-weight:800;
+                padding-left:30px;
+                padding-top: 20px;
+            }
+            .gallery-para{
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-weight: bold;
+                text-decoration: underline;
+                padding-left: 30px;
+            }
+            .gallery-images-mobile{
+                height:80px;
+                border-radius:8px;
+                width:100px;
+            }
+            .gallery-mobile-block{
+                background-color: white;
+            }
+            .gallery-card-container-mobile{
+                display: flex;
+                flex-direction: column;
+                padding:7px;
+                
+            }
+            .gallery-para-card-mobile{
+                background-color:rgb(93, 163, 163);
+                width:80px;
+                height:60px;
+                padding-left: 8px;
+                border-radius:10px;
+                margin:-30px 6px;
+                font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                margin-bottom:20px;
+                
+            }
+            .gallery-para-mobile{
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-weight: bold;
+                font-size:10px;
+                text-decoration: underline;
+                padding-left: 15px;
+            }
+            .gallery-row-flex-container-mobile{
+                display: flex;
+                width:100%;
+                justify-content: center;
+            }
+            .gallery-heading-mobile{
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-size:20px;
+                font-weight:800;
+                padding-left:15px;
+                padding-top: 20px;
+            }
+            .gallery-mobile{
+                background-color: rgb(247, 224, 227);
+                display: none;
+            }
+
+
+
+
+
+            .social-container{
+    background-image: url("images/rg-9.JPG");
+    background-size: cover;
+    height:60vh;
 }
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
+.social-container h1{
+    color:#141414;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    padding-top:50px;
 }
-.fa-instagram {
-  background: #ffffff;
-  color: rgb(230, 38, 38);
+.social-para{
+    color:#080808;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.facebook-icon{
+    text-align: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50px;
+    height:80px;
+    width:80px;
+    margin-bottom:10px;
+}
+.facebook-container{
+    background-color: white;
+    height:200px;
+    width:200px;
+    box-shadow: 8px 8px 8px #181f24;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.twitter-icon{
+    text-align: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    height:80px;
+    width:80px;
+}
+.instagram-icon{
+    text-align: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50px;
+    height:80px;
+    width:80px;
 }
 .social-icons-flex{
-    display:flex;
-    flex-direction: column;
-    position: fixed;
-    top:20%;
-    left:95%;
-    z-index: 1;
-}
-.biography-container{
-    background-color: #cddfdb;
-    display: inline-block;
-    width:100%;
-    font-family:poppins;
-    justify-content: center;
-    height:100vh;
-    
-}
-.biography-flex-card{
-  display: flex;
-  justify-content: center;
-  
-}
-.biography-image-container img{
-    height:50vh;
-}
-.biography-card{
-  background-color: #ceb8a05e;
-  width: 80%;
-  border-radius: 10px;
-  padding-top: 20px;
-  justify-content: center;
-}
-.biography-quote{
-  font-size:15px;
-}
-.para{
-  font-weight:bold;
-  padding-left:490px;
-}
-.biography-background{
-  display: flex;
-}
-.biography-image{
-  height:50vh;
-  border-radius:10px;
-  margin-top:30px;
-  box-shadow: 2px 2px 12px black;
-}
-.biography-background-flex{
-  background-color: #f3f7f8;
-  position: relative;
-  padding:15px;
-  
-}
-.biography-head{
-  padding:20px;
-}
-.background-image{
-  background-image: url("images/bg3.jpg");
-}
-.horigental-red-line{
-  height:5px;
-  background-color:red;
-  width:100px;
-  margin-top:40px;
-  margin-right:10px;
-
-}
-.blanck{
-  background-color: #cddfdb;
-  height:200px;
-  width:400px;
-  border-radius:90px;
-  margin:10px;
-}
-.biography-cards-flex{
-  display: flex;
-  margin:20px;
-}
-.biography-head-para{
-  width:50%;
-}
-.circle{
-  height:30px;
-  width:30px;
-  background-color: #cddfdb;
-  border-radius:50px;
-  margin-top:27px;
-  margin-right:15px;
-  box-shadow:0px 0px 10px 1px  rgb(182, 178, 178);
-}
-.btn{
-  background-color: transparent;
-  display: flex;
-  justify-content: flex-end;
-  border-color: black;
-  border-radius:20px;
-}
-.latest-bg{
-  margin-top:90px;
-  background-image: url("images/lbgcopy.jpg");
-  height:50vh;
-  width:100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  
-  justify-content: center;
-  color:white;
-  
-  font-family: poppins;
-
-}
-.horigental-red-line-latest{
-  height:5px;
-  background-color:red;
-  width:100px;
-  margin-top: 0px;
-}
-
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  padding-top:20px;
-
-}
-
-.grid-item {
-
-  text-align: center;
-}
-.grid-image{
-  height:40vh;
-  width:30vw;
-
- filter:brightness(0.8); 
-}
-
-.image-container {
-   /* Adjust display mode as needed */
-    position: relative;
-}
-
-.image-with-rectangle {
-    position: relative;
-    display: inline-block;
-    
-}
-
-.image-with-rectangle::before {
-    content: '';
-    position: absolute;
-    bottom:20px;
-    top: 20px; /* Adjust top position of the rectangle */
-    left: 20px; /* Adjust left position of the rectangle */
-    width: 26.6vw; /* Adjust width of the rectangle */
-    height: auto; /* Adjust height of the rectangle */
-    background-color:transparent;
-    border:2px solid black;
-    background-color: transparent;
-    border-color:rgb(218, 204, 204);
-    color :white;
-    font-family: poppins;
-    padding-top: 190px;
-    z-index: 1;
-    margin-bottom:-10px;
-}
-.latest-gallery-cards{
-  max-width:100%;
-}
-.latest-gallery-cards p{
-  width:26.78vw;
-  margin-left:20px;
-  background-color: #E5EDFF;
-  height:auto;
-  color:rgb(12, 12, 12);
-  font-family:poppins;
-  font-size:12px;
-  padding:10px;
-  text-align: start;
-
-}
-
-
-.date-card{
-  background-color: red;
-  height:30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width:130px;
-  border-top-right-radius: 20px;
-  position: absolute;
-  color:white;
-  
-}
-.date-card-2{
-  background-color: #cddfdb;
-  height:30px;
-  width:130px;
-}
-
-
-
-
-
-
-
-.slideshow-container-1 {
-    width: 40%;
-    height: 480px;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 1px 1px 20px rgb(97, 82, 82);
-    
-    
-}
-
-.slide {
-    width: 100%;
-    height: 100%;
-    display: none;
-    position: absolute;
-}
-
-.slide img {
-    width: 100%;
-    height: 110%;
-    object-fit: cover;
-    filter: brightness(1.1);
-    
-    
-    
-}
-
-.content-1 h3{
-    font-size: 40px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color:rgb(212, 93, 93);
-    
-    
-}
-.line-1{
-    width:6px;
-    height:50px;
-    background-color: rgb(6, 128, 6);
-    margin-top:40px ;
-    
-}
-.head-gal-1{
     display: flex;
-    gap:10px;
+    justify-content: center;
+    justify-content: space-around;
+    padding-top:50px;
 }
-/* styles.css */
-.grid-container-1 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 600px;
-    height:480px;
-    margin: 0 auto;
-    padding: 20px;
-    margin-top: -60px;
-    margin-left: 100px;
-    gap:20px;
+.twitter-img{
+    height:40px;
+    width:40px;
+    padding-top:10px;
+    padding-left:2px;
+}
+.twitter-container{
+    background-color: white;
+    height:200px;
+    width:200px;
+    box-shadow: 8px 8px 8px #181f24;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.instagram-container{
+    background-color: white;
+    height:200px;
+    width:200px;
+    box-shadow: 8px 8px 8px #181f24;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.grid-item-1 {
-    position: relative;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.social-icons-container-flex{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+}
+.fb-icon{
+    font-size:60px;
+}
+.fb-url{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.icon-link{
+    text-decoration: none;
+    padding-top:20px;
+}
+.twitter-logo{
+    height:70px;
+    width:73px;
 }
 
-.grid-item-1 img {
-    height:100%;
-    width:100%;    
-    object-fit: cover;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.height{
+    height:200px;
 }
-.img-g-c-1{
-    display:flex;
+.end-container{
+            background-color:rgb(241, 243, 132);
+            width:100%;
+            padding:10px;
+            border-radius:15px;
+        }
+        .quick-links-container{
+            display: flex;
+            flex-direction: column;
+            padding-bottom:20px;
+            
+        }
+        .quick-link{
+            text-decoration: none;
+            color:black;
+            font-family: cursive;
+            padding-left:20px
+
+        }
+        .end-image{
+            height:60px;
+            border-radius: 50px;
+            box-shadow: 10px 10px 10px rgb(241, 243, 132);
+            margin-right:20px;
+            margin-top:10px;
+        }
+        .end-logo-title-container{
+            display: flex;
+            justify-content: space-between;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+        .end-image-flex{
+            display: flex;
+        }
+
+
+
+
+
+
+.center{
+    margin-left: -10%;
 }
 
-.buttons-1 {
-        position: relative;
-      }
-.buttons-1 button {
-        display: inline-block;
-        height: 15px;
-        width: 15px;
-        border-radius: 50px;
-        background-color:white;
-        box-shadow: 1px 3px 15px black;
-        padding:5px;
-        margin-left:10px;
-        margin-bottom:30px;
-        border:none;
-      }
-      .gal-main-container-1{
-        width:100%;
-      }
-      .gal-para{
-        margin-top:-30px;
-        font-family: poppins;
-        font-weight:13px;
-      }
+
+
+.social {
+
+  display: flex;
+  flex-direction: row;
+  
+}
+.social {
+    padding-left: 0px;
+  }
+  .li-1 {
+    color: rgba(167, 146, 129, 0.6);
+    list-style-type: none;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    padding: 1%;
+    border: 1px solid rgba(167, 146, 129, 0.4);
+    cursor: pointer;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    transition: ease .3s;
+    &:hover {
+      
+      border: 1px solid rgba(167, 146, 129, 1);
+    }
+  }
+
+
+.social:hover > .li-1 {
+  opacity: 0.5;
+  color: rgb(248, 247, 247);
+  background: linear-gradient(to bottom,rgb(223, 8, 8),rgb(217, 255, 0));
+}
+
+.social:hover > .li-1:hover {
+  opacity: 1;
+}
+#social-test {
+  text-align:center;
+  font-size: 15px;
+}
+.end-container-mobile{
+    display: none;
+}
+.end-container-mobile{
+    background-color:rgb(241, 243, 132);
+    width:100%;
+    padding:10px;
+    border-radius:10px;
+}
+.quick-links-container-mobile{
+    display: flex;
+    flex-direction: column;
+    padding-bottom:10px;
+    
+}
+.quick-link-mobile{
+            text-decoration: none;
+            color:black;
+            font-family: cursive;
+            padding-left:20px
+
+        }
+        .end-image-mobile{
+            height:30px;
+            border-radius: 50px;
+            box-shadow: 10px 10px 10px rgb(241, 243, 132);
+            margin-right:10px;
+            margin-top:10px;
+        }
+        .end-logo-title-container-mobile{
+            display: flex;
+            justify-content: space-between;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        }
+        .end-image-flex-mobile{
+            display: flex;
+        }
 
 
 
 
 
-      .footer-container{
-                background-image: url("images/footer (1).jpg");
-                height:auto;
-                width:100%;
-                padding:15px;
-                font-family:arial;
-                font-weight:normal;
-                margin-top:20px;
-            }
-            .about-leaders{
-                font-size:10px
-            }
-            .about-leaders a{
-                text-decoration: none;
-                color:rgb(102, 74, 74);
-            }
-            .footer-items-flex{
-                display: flex;
-                justify-content: space-between;
-            }
-            .links-footer{
-                font-size:10px
-            }
-            .links-footer a{
-                text-decoration: none;
-                color:rgb(102, 74, 74);
-            }
-            .contact-footer{
-                font-size:10px;
-            }
-            .contact-footer p{
-                text-decoration: none;
-                color:rgb(102, 74, 74);
-            }
+
+.center-mobile{
+    margin-left: -20%;
+}
+
+
+
+.social-mobile {
+
+  display: flex;
+  flex-direction: row;
+  
+}
+.social-mobile {
+    padding-left: 0px;
+  }
+  .li-1-mobile {
+    color: rgba(167, 146, 129, 0.6);
+    list-style-type: none;
+    width: 20px;
+    height: 25px;
+    line-height: 25px;
+    padding: 1%;
+    border: 1px solid rgba(167, 146, 129, 0.4);
+    cursor: pointer;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    transition: ease .3s;
+    &:hover {
+      
+      border: 1px solid rgba(167, 146, 129, 1);
+    }
+  }
+
+
+.social-mobile:hover > .li-1-mobile {
+  opacity: 0.5;
+  color: rgb(248, 247, 247);
+  background: linear-gradient(to bottom,rgb(223, 8, 8),rgb(217, 255, 0));
+}
+
+.social-mobile:hover > .li-1-mobile:hover {
+  opacity: 1;
+}
+#social-test-mobile {
+  text-align:center;
+  font-size: 15px;
+}
+
+
+
+
             
 
-            .facebook-1 {
-            color: #3b5998;
-            font-size:25px;
-            }
-            .twitter-1 {
-            color: #1da1f2;
-            font-size:25px;
-            }
-            .instagram-1 {
-            color: #c32aa3;
-            font-size:25px;
-            }
-            .list-social{
-                list-style-type: none;
-            }
-            .copy-social-flex{
-                display:flex;
-                justify-content: space-between;
-            }
-            .wid{
-              max-width:100%;
-              
-            }
-            .spanShow{
-              display: none;
-            }
-            
-            
+            @media screen and (max-width:600px) {
+                .el-img img{
+                    right:1%;
+                    transform: scale(0.5);
+                    top:-25%;
+                }
+                .animation-container{
+                    width: 100%;
+                    height: 50vh;
+                    background-image: url("images/bg6.png");
+                }
+                                
+                .el-content,.el-content1,.el-content2{
+                    height:35vh;
+                    width:52vw;
+                    background:linear-gradient(to bottom,white 20%,rgba(15, 247, 73, 0.363) );
+                    border-radius:20px ;
+                    box-shadow: 2px 2px 30px 3px rgb(118, 218, 168);
+                    transition: 11111111111111111111s;
+                    
+                }
+                .el-content{
+                    top:125%;
+                    left:26%;
+                    font-size:12px;
+                    
 
-            @media screen and (max-width: 600px) {
-
-
-              body{
-                width:100vw;
-                overflow-x: hidden;
-              }
-              .logo{
-                
-                width:130px;
-                padding-top: 15px;
-                margin-left:0px;
-                padding-left:10px;
-                
-                
-
-            
-            }
-            .heading{
-                font-size:10px;
-                color:#0c0c0c;
-                font-family: Arial, Helvetica, sans-serif;
-                color:#070707;
-                margin-top:20px
-            }
-            
+                }
+                .el-content1{
+                    top:172%;
+                    left:26%;
+                    font-size:12px;
+                }
+                .el-content2{
+                    top:220%;
+                    left:26%;
+                    height:50%;
+                    font-size:12px;
+                    padding-bottom:10px;
+                }
                 .nav{
-                  display:none;
+                    display: none;
+                }
+                .animation-container{
+                    width:100vw;
+                    height:50vh;
+                }
+                .animation-container img{
+                    transform: scale(0.8);
+                    position: relative;
+                    left:-35%;
+                    
+                }
+                .quote-container{
+                    text-align: end;
+                    font-size:17px;
+                }
+                .logo{
+                    transform: scale(0.5);
+                    left:-23%;
+                    top:-14%;
+                    position: relative;
+                }
+                .header{
+                    height:50px;
                 }
                 .dropdown{
                     display: inline-block;
@@ -621,9 +971,6 @@ img {vertical-align: middle;}
                 .dropdown button{
                     border-radius:5px;
                     box-shadow: 2px 2px 5px black;
-                    margin-right:-150px;
-                    background-color:#5e9ec5;
-                    font-size:10px;
                     
                 }
                 .dropdown-content{
@@ -633,406 +980,143 @@ img {vertical-align: middle;}
                     border-radius:10px;
                     margin-top:10px;
                 }
-                .biography-container{
-                    background-color: #cddfdb;
-                    width:100%;
-                    padding: 20px;
-                    font-family:poppins;
-                    justify-content: center;
-                    height:auto;
-                    font-size:10px;
+                .latest-container{
+                    display: none;
+                }
+                .hide-container{
+                    display:block;
+                }
+                .space{
+                    display:block;
+                }
+                .gallery-mobile-block{
+                    display: none;
                     
                 }
-                .biography-flex-card{
-                  display: flex;
-
+                .gallery-mobile{
+                    display:block
                 }
-                
-                .biography-image-container img{
-                    height:30vh;
-                   
+                .social-container{
+                background-image: url("images/rg-9.JPG");
+                background-size: cover;
+                height:30vh;  
                 }
-                .biography-card{
-                  background-color: #ceb8a05e;
-                  width: 90%;
-                  border-radius: 10px;
-                  padding-top: 10px;
-                  justify-content: center;
+                .facebook-icon{
+                    text-align: center;
+                    background-color: white;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    border-radius: 50px;
+                    height:40px;
+                    width:40px;
+                    margin-bottom:5px;
                 }
-                .biography-quote{
-                  font-size:10px;
-
+                .facebook-container{
+                    background-color: white;
+                    height:100px;
+                    width:100px;
+                    box-shadow: 8px 8px 8px #181f24;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
-                .head-bio{
-                  padding-left:25px;
+                .twitter-icon{
+                    text-align: center;
+                    background-color: white;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50px;
+                    height:40px;
+                    width:40px;
                 }
-                .biography-head-para p{
-                  width:200px;
-                  padding-top:25px;
-                  margin-left:-50px
+                .instagram-icon{
+                    text-align: center;
+                    background-color: white;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    border-radius: 50px;
+                    height:40px;
+                    width:40px;
                 }
-                .biography-head-para h1{
-                  font-size:10px;
+                .twitter-img{
+                    height:20px;
+                    width:20px;
+                    padding-top:5px;
+                    padding-left:1px;
                 }
-                .para{
-                  padding-left:0px;
+                .twitter-container{
+                    background-color: white;
+                    height:100px;
+                    width:100px;
+                    box-shadow: 8px 8px 8px #181f24;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
-                .biography-background{
-                  display: flex;
-                  flex-direction: column;
+                .instagram-container{
+                    background-color: white;
+                    height:100px;
+                    width:100px;
+                    box-shadow: 8px 8px 8px #181f24;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
-                .biography-image{
-                  height:40vh;
-                  border-radius:10px;
-                  margin-top:10px;
-                  box-shadow: 2px 2px 12px black;
+                .fb-icon{
+                    font-size:30px;
                 }
-                .biography-background-flex{
-                  background-color: #f3f7f8;
-                  padding:5px;
-                  
+                .fb-url{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                 }
-                .biography-head{
-                  padding:8px;
+                .icon-link{
+                    text-decoration: none;
+                    padding-top:20px;
                 }
-                .background-image{
-                  background-image: url("images/bg3.jpg");
+                .twitter-logo{
+                    height:35px;
+                    width:35px;
                 }
-                .horigental-red-line{
-                  height:5px;
-                  background-color:red;
-                  width:100px;
-                  margin-top:40px;
-                  margin-right:10px;
-
-                }
-                .blanck{
-                  background-color: #cddfdb;
-                  height:40px;
-                  width:350px;
-                  border-radius:90px;
-                  margin:0px;
-                }
-                .biography-cards-flex{
-                  display: flex;
-                  margin:20px;
-                }
-                .biography-head-para{
-                  width:50%;
-                }
-                .circle{
-                  height:20px;
-                  width:80px;
-                  background-color: #cddfdb;
-                  border-radius:50px;
-                  margin-top:27px;
-                  margin-right:15px;
-                  box-shadow:0px 0px 10px 1px  rgb(182, 178, 178);
-                }
-                .btn{
-                  background-color: transparent;
-                  display: flex;
-                  justify-content: flex-end;
-                  border-color: black;
-                  border-radius:20px;
+                .social-icons-container-flex{
+                    display: flex;
+                    justify-content: center;
+                    justify-content: space-around;
                 }
                 .social-icons-flex{
-                  display:flex;
-                  flex-direction: column;
-                  position: fixed;
-                  left:10%;
-                  z-index: 1;
-              }
-              body{
-                overflow-x: hidden;
-                
-                
-              }
-              .latest-bg{
-                margin-top:50px;
-                background-image: url("images/lbgcopy.jpg");
-                height:20vh;
-                width:100%;
-                background-repeat: no-repeat;
-                background-size: cover;
-                display: flex;
-                align-items: center;
-                flex-direction: column;
-                
-                justify-content: center;
-                color:white;
-                
-                font-family: poppins;
-
-              }
-              .horigental-red-line-latest{
-                height:5px;
-                background-color:red;
-                width:100px;
-                margin-top: 0px;
-              }
+                    display: flex;
+                    justify-content: center;
+                    justify-content: space-around;
+                    padding-top:25px;
+                }
+                .end-container{
+                    display: none;
+                }
+                .end-container-mobile{
+                    display: block;
+                }
 
 
-              .grid-container {
-                display: grid;
-                grid-template-columns: auto;
-                padding-top:20px;
+            }
+    
 
-              }
-
-              .grid-item {
-
-                text-align: center;
-              }
-              .grid-image{
-                height:30vh;
-            
-                width:60vw;
-                filter:brightness(0.8); 
-              }
-
-              .image-container {
-                  display: inline-block; /* Adjust display mode as needed */
-                  position: relative;
-              }
-
-              .image-with-rectangle {
-                  position: relative;
-                  display: inline-block;
-                  
-              }
-
-              .image-with-rectangle::before {
-                  content: '';
-                  position: absolute;
-                  bottom:20px;
-                  top: 20px; /* Adjust top position of the rectangle */
-                  left: 6px; /* Adjust left position of the rectangle */
-                  width: 55vw; /* Adjust width of the rectangle */
-                  height: auto; /* Adjust height of the rectangle */
-                  background-color:transparent;
-                  border:2px solid black;
-                  background-color: transparent;
-                  border-color:rgb(218, 204, 204);
-                  color :white;
-                  font-family: poppins;
-                  padding-top: 190px;
-                  z-index: 1;
-                  margin-bottom:-10px;
-              }
-              .latest-gallery-cards{
-                width:55vw;
-                margin-left:10px;
-                background-color: #E5EDFF;
-                height:auto;
-                color:rgb(12, 12, 12);
-                font-family:poppins;
-                font-size:12px;
-                padding-left:8px;
-                text-align: start;
-                margin-bottom:10px;
-                overflow: hidden;
-              }
-              .latest-gallery-cards p{
-                width:50vw;
-              }
-              
-              .date-card{
-                background-color: red;
-                height:15px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width:80px;
-                border-top-right-radius: 20px;
-                position: absolute;
-                color:white;
-                font-size:10px;
-                
-              }
-              .date-card-2{
-                background-color: #cddfdb;
-                height:15px;
-                width:80px;
-              }
-              .slideshow-container-1 {
-                width: 80%;
-                height: 300px;
-                overflow: hidden;
-                position: relative;
-                margin:20px;
-                margin-bottom :60px;
-                box-shadow: 1px 1px 20px rgb(97, 82, 82);
-                
-                
-            }
-
-            .slide {
-                width: 100%;
-                height: 100%;
-                display: none;
-                position: absolute;
-            }
-
-            .slide img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                filter: brightness(1.1);
-                
-                
-                
-            }
-
-            .content-1 h3{
-                font-size: 20px;
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                color:rgb(212, 93, 93);
-                
-                
-            }
-            .line-1{
-                width:6px;
-                height:50px;
-                background-color: rgb(6, 128, 6);
-                margin-top:40px ;
-                
-            }
-            .head-gal-1{
-                display: flex;
-                gap:10px;
-            }
-            /* styles.css */
-            .grid-container-1 {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);                
-                margin: 0 auto;
-                padding: 20px;
-                margin-top: -60px;
-                margin-left: 00px;
-                gap:20px;
-            }
-            .grid-item-1 {
-                position: relative;
-                overflow: hidden;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-               width:100px;
-               
-               
-
-                
-            }
-
-            .grid-item-1 img {
-                height:100%;
-                width:100%;
-                object-fit: cover;
-            }
-            .img-g-c-1{
-                display:flex;
-                flex-direction: column;
-            }
-
-            .buttons-1 {
-                    position: relative;
-                  }
-            .buttons-1 button {
-                    display: inline-block;
-                    height: 15px;
-                    width: 15px;
-                    border-radius: 50px;
-                    background-color:white;
-                    box-shadow: 1px 3px 15px black;
-                    padding:5px;
-                    margin-left:10px;
-                    margin-bottom:30px;
-                    border:none;
-                  }
-                  .gal-main-container-1{
-                    width:100%;
-                  }
-                  .gal-para{
-                    margin-top:20px;
-                    font-family: poppins;
-                    font-weight:10px;
-                  }
-                  .footer-container{
-                background-image: url("images/footer (1).jpg");
-                background-size: cover;
-                padding:15px;
-                font-family:arial;
-                font-weight:normal;
-            }
-            .about-leaders{
-                font-size:10px
-            }
-            .about-leaders a{
-                text-decoration: none;
-                color:rgb(102, 74, 74);
-            }
-            .about-leaders h1{
-              font-size:13px;
-            }
-            .footer-items-flex{
-                display: flex;
-                justify-content: space-between;
-            }
-            .links-footer{
-                font-size:10px
-            }
-            .links-footer a{
-                text-decoration: none;
-                color:rgb(102, 74, 74);
-            }
-            .links-footer h1{
-              font-size:13px;
-            }
-            .contact-footer{
-                font-size:10px;
-            }
-            .contact-footer h1{
-              font-size:13px;
-            }
-            .contact-footer p{
-                text-decoration: none;
-                color:rgb(102, 74, 74);
-            }
-            
-
-            .facebook-1 {
-            color: #3b5998;
-            font-size:25px;
-            }
-            .twitter-1 {
-            color: #1da1f2;
-            font-size:25px;
-            }
-            .instagram-1 {
-            color: #c32aa3;
-            font-size:25px;
-            }
-            .list-social{
-                list-style-type: none;
-            }
-            .copy-social-flex{
-                display:flex;
-                justify-content: space-between;
-            }
-
-            }
-
-            
 
 
         </style>
-    </head>
-    <body>
+        <body>
 
-        <div class="header" style="width: 100%;">
+            <div class="header">
 
                 <div class="logo">
-                    <img src="images\logo.png">
+                    <img src="images\1517285382705-removebg-preview.png">
                     <h1 class="heading">CHINARAJAPPA
                         NIMMAKAYALA
                     </h1>
@@ -1042,7 +1126,7 @@ img {vertical-align: middle;}
                 </div>
                 <div class="nav">
                     <ul class="navbar">
-                        <li class="nav-items"><a href="#slideshowContainer" class="list">Home</a></li>
+                        <li class="nav-items"><a href="#homeContainer" class="list">Home</a></li>
                         <li class="nav-items"><a href="#biographyContainer" class="list">Biography</a></li>
                         <li class="nav-items"><a href="#latestContainer" class="list">latest Activities</a></li>
                         <li class="nav-items"><a href="#galleryContainer" class="list">Gallery</a></li>
@@ -1053,653 +1137,533 @@ img {vertical-align: middle;}
                 <div class="dropdown">
                     <button onclick="toggleDropdown()">Menu</button>
                     <div id="myDropdown" class="dropdown-content">
-                      <a href="#slideshowContainer">Home</a>
+                      <a href="#homeContainer">Home</a>
                       <a href="#biographyContainer">Biography</a>
-                      <a href="#latestContainer">Latest Activities</a>
+                      <a href="#latestMobileContainer">Latest Activities</a>
                       <a href="#galleryMobileContainer">Gallery</a>
                       <a href="#socialContainer">Social Media</a>
                     </div>
                   </div>
 
                 </div>
-
-
-
-            
-            <div class="slideshow-container" id="slideshowContainer" style="width: 100%;">
-              <div class="mySlides1">
-                <img src="images\slider11.jpg" style="width:100%">
-                <div class="social-icons-flex">
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                </div>
-              </div>
-            
-              <div class="mySlides1 background-image" style="width: 100%;">
-                <img src="images\DSC_0613.jpg" style="width:100%">
-                <div class="social-icons-flex">
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                </div>
-              </div>
-            
-              <div class="mySlides1">
-                <img src="images\rg-7.JPG" style="width:100%">
-                <div class="social-icons-flex">
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                </div>
-              </div>
-            
-              <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
             </div>
-
-            <div class="biography-container" id="biographyContainer">
-              <div class="biography-flex-card">
-                <div>
-                <h1 class="head-bio">BIOGRAPHY</h1>
-                <div class="horigental-red-line" style="margin-top: 0px; margin-left:30px;"></div>
-                <div class="biography-quote">
-                    <p>A leader being a good listener is absolutely critical to being a good leader. You have to listen to the people who are on the front line.</p>
-                    <p class="para">-N Chinarajappa</p>
-                </div>
-                </div>
-                <div class="biography-image-container">
-                    <img src="images/rgg5.png"/>
-                </div>
+            <div class="main-container" id="homeContainer">                  
+                  
+                
+                <div class="slideshow-container">
+                    <div class="animation-container">
+                  <img src="images\Rajappa_Garu_2-removebg-preview.png" class="rajappa-new " />
+                  <div class="quote-container" id="quote1"> A Remarkable Journey of Dedication and Leadership </div>
                   
                 </div>
-
-              <div class="biography-background-flex">
-                <div class="biography-background">
-                  <img src="images\rg-7.JPG" class="biography-image"/>
-                  <div class="biography-head">
-                    <h1 style="font-size:15px;">Nimmakayala Chinarajappa</h1>
-                    <p >MLA Peddapuram</p>
-                    <p style="font-size: 15px;">In the realm of Indian politics, there are individuals 
-                      whose unwavering dedication, exceptional leadership, and
-                       profound impact on society shine brightly. One such 
-                       personality is Nimmakayala Chinna Rajappa. Hailing from
-                        Andhra Pradesh, Rajappa's journey as a politician has 
-                        been characterized by his relentless commitment to public
-                         service and his transformative initiatives. This blog 
-                         delves into the life and accomplishments of Nimmakayala
-                          Chinna Rajappa, highlighting his contributions to society
-                           and the lasting legacy he leaves behind. </p>
                   </div>
                 </div>
-                <div class="biography-cards-flex">
-                  <div class="horigental-red-line"></div>
-                  <div class="circle"></div>
-                  <div class="biography-head-para">
-                  <h1>Early life and Education</h1>
-                  
-                  <p>Nimmakayala Chinna Rajappa was born on [date] in [place].
-                     From an early age, he displayed a keen interest in social
-                      welfare and politics, nurturing a deep-seated desire to
-                       serve his community. <span class="spanShow" id="spanShow">Rajappa completed his education at
-                        [name of institution], where he honed his leadership
-                         skills and gained valuable insights into governance
-                          and public administration.</span> </p>
 
-                    <div class="btn">
-                      <button id="btn1">Read More</button>
-                    </div>
-                  </div>
-                  <div class="blanck"></div>
-                </div>
+                <div class="biography-main-container" id="biographyContainer">
 
-                <div class="biography-cards-flex">
-                  <div class="blanck"></div>
-                  
-                  
-                  <div class="biography-head-para">
-                  <h1>Political Journey and Contributions</h1>
-                  <p>Joined Telugu Desam Party and swiftly rose through the ranks,
-                     earning the trust and admiration of his constituents. <span class="spanShow" id="spanShow2">Rajappa's
-                      political career spans several significant roles and 
-                      accomplishments.</span></p>
-                    <div class="btn">
-                      <button id="btn2">Read More</button>
-                    </div>
-                  </div>
-                  <div class="circle"></div>
-                  <div class="horigental-red-line"></div>
-                </div>
+                    <div class="bio-head" ><h1>BIOGRAPHY</h1></div>
 
-
-                <div class="biography-cards-flex">
-                  <div class="horigental-red-line"></div>
-                  <div class="circle"></div>
-                  <div class="biography-head-para">
-                  <h1>Commitment to Rural Development</h1>
-                  <p>Nimmakayala Chinna Rajappa's unwavering commitment to rural development
-                     is noteworthy. <span class="spanShow" id="spanShow3">He recognized the importance of empowering rural communities
-                      and worked tirelessly to address their specific needs.</span></p>
-                    <div class="btn">
-                      <button id="btn3">Read More</button>
-                    </div>
-                  </div>
-                  <div class="blanck"></div>
-                </div>
-
-                <div class="biography-cards-flex">
-                  <div class="blanck"></div>
-                  
-                  
-                  <div class="biography-head-para">
-                  <h1>Ministerial Positions</h1>
-                  <p>Rajappa was entrusted with ministerial responsibilities. He served as MLC
-                     from 2007 to 2013. where he implemented progressive 
-                     policies and spearheaded <span class="spanShow" id="spanShow4">initiatives that contributed to
-                      the overall growth of the state. His tenure witnessed 
-                      significant advancements in sectors and brought about 
-                      positive transformations.</span></p>
-                    <div class="btn">
-                      <button id="btn4">Read More</button>
-                    </div>
-                  </div>
-                  <div class="circle"></div>
-                  <div class="horigental-red-line"></div>
-                </div>
-
-              </div>
-              </div>
-              
-
-              </div>           
+        <div class ="el">
+            <div class="el-img">
+                <img src="images\rgg.png">
+                
 
             </div>
-            <div class="latest-bg" id="latestContainer">
-              <h1>LATEST NEWS</h1>
-              <div class="horigental-red-line-latest"></div>
-            </div>            
-            <div class="grid-container">
-             
-              <div class="grid-item">
-                <div class="image-container">
-                  <div class="image-with-rectangle">
-                                    
-                <img src="images\DCM_3974.jpg" class="grid-image"/>
-                <div class="date-position">
-                <div class="date-card"><p>07 Sep 2018</p></div>
-                <div class="date-card-2"></div>
-                </div>
-                <div class="latest-gallery-cards">
-                  <p class="over">Speaking on the occasion, he said that the government had spent 
-                    Rs 23 lakh on construction of each quarters. For the first time,
-                    the houses were build in an extent of 1,030 feet area as against 
-                    usual 500 feet area.</p>
-                </div>
-              </div>
-            </div>
-              </div>
-              <div class="grid-item">
-                <div class="image-container">
-                  <div class="image-with-rectangle">
-                                    
-                <img src="images\800px-thumbnail.jpg" class="grid-image"/>
-                <div class="date-position">
-                <div class="date-card"><p>09 Oct 2015</p></div>
-                <div class="date-card-2"></div>
-                </div>
-                <div class="latest-gallery-cards">
-                  <p class="over">The Deputy Chief Minister, Minister for Revenue, Stamps &
-                     Registration Shri K.E. Krishna Murthy and the Deputy Chief 
-                     Minister & Home Minister Shri N. Chinarajappa lighting the 
-                     lamp at the Public Information Campaign</p>
-                </div>
-              </div>
-            </div>
-              </div>
-              <div class="grid-item">
-                <div class="image-container">
-                  <div class="image-with-rectangle">
-                                    
-                <img src="images\rgm.jpg" class="grid-image"/>
-                <div class="date-position">
-                <div class="date-card"><p>09 Oct 2015</p></div>
-                <div class="date-card-2"></div>
-                </div>
-                <div class="latest-gallery-cards">
-                  <p class="over">The Deputy Chief Minister & Home Minister, Shri N. Chinarajappa addressing at the Public Information Campaign, at Yemmiganur, Kurnool district, Andhra Pradesh on October 09, 2015.</p>
-                </div>
-              </div>
-            </div>
-              </div>
-              <div class="grid-item">
-                <div class="image-container">
-                  <div class="image-with-rectangle">
-                                    
-                <img src="images\rajappacy.jpg" class="grid-image"/>
-                <div class="date-position">
-                <div class="date-card"><p>16 Dec 2018</p></div>
-                <div class="date-card-2"></div>
-                </div>
-                <div class="latest-gallery-cards">
-                  <p class="over"> Honourable Deputy Chief Minister N.Chinarajappa and District collector conducted review meeting on Phethai Cyclone with District officers at Collectorate Kakinada</p>
-                </div>
-              </div>
-            </div>
-              </div>
-              <div class="grid-item">
-                <div class="image-container">
-                  <div class="image-with-rectangle">
-                                    
-                <img src="images\DOrCqi5XkAI5T_9.jpg" class="grid-image"/>
-                <div class="date-position">
-                <div class="date-card"><p>12 Nov 2017</p></div>
-                <div class="date-card-2"></div>
-                </div>
-                <div class="latest-gallery-cards">
-                  <p class="over">On 12th November 2017, Minister for Home & Deputy Chief Minister, Govt. of Andhra Pradesh  Sri Nimmakayala Chinarajappa Garu Visited Srisaila Devasthanam.</p>
-                  
-                </div>
-              </div>
-            </div>
-              </div>  
-              <div class="grid-item">
-                <div class="image-container">
-                  <div class="image-with-rectangle">
-                                    
-                <img src="images\2017102720.jpg" class="grid-image"/>
-                <div class="date-position">
-                <div class="date-card"><p>27 Oct 2017</p></div>
-                <div class="date-card-2"></div>
-                </div>
-                <div class="latest-gallery-cards">
-                  <p class="over">Dy. CM Shri N.Chinarajappa, Dist Collector and Dist officers participated in the Chief Minister video conference at Collectorate, Kakinada on 27-10-2017.</p>
-                  
-                </div>
-              </div>
-            </div>
-              </div>
-              <div class="grid-item">
-                <div class="image-container">
-                  <div class="image-with-rectangle">
-                                    
-                <img src="images\dc-Cover-5labqo4vq8014i14i34anv2eg5-20160505063829.Medi.jpeg" class="grid-image"/>
-                <div class="date-position">
-                <div class="date-card"><p>05 May 2016</p></div>
-                <div class="date-card-2"></div>
-                </div>
-                <div class="latest-gallery-cards">
-                  <p class="over">The Deputy Chief Minister said that the government was taking all necessary measures to tackle severe drought conditions in the state. About 17,000 chalivendrams were launched to provide butter milk and water free of cost. Drinking water would be supplied in tankers for habitations facing deep depletion of ground water in the state, he said.</p>
-                </div>
-              </div>
-            </div>
-              </div>
-              <div class="grid-item">
-                <div class="image-container">
-                  <div class="image-with-rectangle">
-                                    
-                <img src="images\police.jpg" class="grid-image"/>
-                <div class="date-position">
-                <div class="date-card"><p>31 Jan 2019</p></div>
-                <div class="date-card-2"></div>
-                </div>
-                <div class="latest-gallery-cards">
-                  <p class="over">All police stations in Vizag will be modernised with a funding of Rs 75 crores,
-                     Andhra Pradesh Home and Deputy Chief Minister Nimmakayala Chinarajappa informed. 
-                     The Minister laid foundation stones for five new police buildings in Vizag on 
-                     Tuesday.</span></p>
-                </div>
-              </div>
-            </div>
-              </div> 
-              
-              
-              <div class="grid-item">
-                <div class="image-container">
-                  <div class="image-with-rectangle">
-                                    
-                <img src="images\june143-audio.jpg" class="grid-image"/>
-                <div class="date-position">
-                <div class="date-card"><p>08 June 2017</p></div>
-                <div class="date-card-2"></div>
-                </div>
-                <div class="latest-gallery-cards">
-                  <p class="over">Audio of ‘June 1:43’ was launched by AP Home Minister Nimmakayala Chinarajappa. The film that features Aditya and Richa in the lead roles is being directed by Bhaskr Bantupalli under Aditya Creations banner with Lakshmi as producer. After launching the audio CDs, the minister wished all the best to the film unit members.
-                    On this occasion, Lakshmi said, “Sravan has given excellent music. Besides music, he has given wonderful background score also. Krishna Kanth has penned beautiful lyrics. I was very much impressed by the script narrated by Bhaskar and therefore came forward to produce the film.
-                  </p>
-                  
-                </div>
-              </div>
-            </div>
-              </div>
-              
-            </div>
-          </div>
-
-
-
-
-
-
-            <div class="gal-main-container-1" id="galleryContainer">
-              <div class="head-gal-1">
-  
-                  <div class="line-1">
-  
-                  </div>
-                  <div class="content-1">
-                      <h3>Gallery</h3>
-                      <p class="gal-para">See More about our N.Chinarajappa activities</p>
-                  </div>
-              </div>
-  
-              <div class="img-g-c-1">
-                  <div class="slideshow-container-1">
-  
-                      <div class="slide">
-                          <img src="images\slide1c.jpg" alt="Image 1">
-                      </div>
-                      <div class="slide">
-                          <img src="images\DSC_0613.jpg" alt="Image 2">
-                      </div>
-                      <div class="slide">
-                          <img src="images\Chinarajappa1.jpg" alt="Image 3">
-                      </div>
-  
-                  </div>
-                  <div class="nine-img-1">
-                      <div class="grid-container-1">
-                          <div class="grid-item-1">
-                              <img src="images\136749766_496174774700420_1644050917513166079_n.jpg" alt="Image 1">
-                          </div>
-                          <div class="grid-item-1">
-                              <img src="images\dc-Cover-5labqo4vq8014i14i34anv2eg5-20160505063829.Medi.jpeg" alt="Image 2">
-                          </div>
-                          <div class="grid-item-1">
-                              <img src="images\DSC_0613.jpg" alt="Image 3">
-                          </div>
-                          <div class="grid-item-1">
-                              <img src="images\FB_IMG_1690623093406.jpg" alt="Image 4">
-                          </div>
-                          <div class="grid-item-1">
-                              <img src="images\rajappacy.jpg" alt="Image 5">
-                          </div>
-                          <div class="grid-item-1">
-                              <img src="images/rg-2.JPG" alt="Image 6">
-                          </div>
-                          <div class="grid-item-1">
-                              <img src="images/rg-7.JPG" alt="Image 7">
-                          </div>
-                          <div class="grid-item-1">
-                              <img src="images/rg-8.JPG" alt="Image 8">
-                          </div>
-                          <div class="grid-item-1">
-                              <img src="images/rgg.png" alt="Image 9">
-                          </div>
-                          </div>
-  
-                          <div class="buttons-1">
-                              <button id="changeButton"></button>
-                              <button id="changeButtonA"></button>
-                             
-                          </div>
-  
-                  </div>
-                  </div>
-              </div>
-  
-
-          
-
-
-
-
-          <div class="footer-container">
-            <div class="footer-items-flex">
-            <div class="about-leaders">
-                <h1>ABOUT LEADERS</h1>
-                <a href=""><p>N.Chandrababu Naidu</p></a>
-                <a href="">Nara Lokesh</a>
-            </div>
-            <div class="links-footer">
-                <h1>LINKS</h1>
-                <a href=""><p>Biography</p></a>
-                <a href=""><p>Latest Activities</p></a>
-                <a href="">Gallery</a>
-                <a href="">Social Media</a>
-            </div>
-            <div>
+            <div class="hide">
+            <div class="el-content">
+                <h3>Early life and Education</h3>
+                <p>Nimmakayala Chinna Rajappa was born in Pedagadavalli, Uppalaguptam Zone, East Godavari District. From an early age, he displayed a keen interest in social welfare and politics, nurturing a deep-seated desire to serve his community.  He completed his post-graduation in Master of Arts.</p>
 
             </div>
-            <div class="contact-footer">
-                <h1>Contact</h1>
-                <p>Email:</p>
-            </div>
-            </div>
-            <hr/>
-            <div class="copy-social-flex">
-            <p style="font-size:13px; color:rgb(34, 29, 29);">Copyright <span>&copy</span> 2023. Nimmakayala Chinarajappa</p>
-                <div>
-                  <a class="facebook-1" href="#">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                  <a class="twitter-1" href="#">
-                    <i class="fa fa-twitter"></i>
-                  </a>
 
-                  <a class="instagram-1" href="#">
-                    <i class="fa fa-instagram"></i>
-                  </a>
+            <div class="el-content1">
+                <h3>Political Journey and Contributions </h3>
+                <p>Joined Telugu Desam Party and swiftly rose through the ranks, earning the trust and admiration of his constituents. Rajappa's political career spans several significant roles and accomplishments. </p>
 
-                </div>
+            </div>
+
+            <div class="el-content2">
+                <h3>Ministerial Positions</h3>
+                <p>Rajappa was entrusted with ministerial responsibilities. He served as MLC from 2007 to 2013. where he implemented progressive policies and spearheaded initiatives that contributed to the overall growth of the state. His tenure witnessed significant advancements in sectors and brought about positive transformations. </p>
+
+            </div>
             </div>
         </div>
-            
-            
-      </div>
-            
-            
-            <script>
+
+                </div>
 
 
 
 
+                    
+                
+                <div class="latest-container" id="latestContainer">
+                    <h1 class="latest-start" style="color: rgb(236, 197, 197);">Latest Activity</h1>
+                    <div class="l-card">
+                        <div class="l-image-card">
+                            <img src="images\rg-2.JPG"/>
+                            <h1 class="latest-heading" style="color:white">Impact on Society and Devolopment</h1>
+                            <p class="latest-description">Chinna Rajappa's political career has had a profound impact 
+                                on society. His relentless efforts in infrastructure 
+                                development have improved connectivity, enhancing the 
+                                socio-economic progress of communities. His focus on rural 
+                                empowerment has uplifted marginalized sections, providing them 
+                                with opportunities and resources. By championing good governance, he has 
+                                inspired a culture of transparency and accountability in public service.</p>
+                        </div>
+                    </div>
+                    <div class="l-card">
+                        <div class="l-image-card">
+                            <img src="images\FB_IMG_1690623093406.jpg"/>
+                            <h1 class="latest-heading" style="color:white">Commitment to Good Governance</h1>
+                            <p class="latest-description">Throughout his political journey, Chinna Rajappa has been a staunch 
+                                advocate for good governance and administrative reforms. He firmly 
+                                believed in transparency, accountability, and efficiency in public 
+                                administration. Rajappa introduced measures to streamline processes, 
+                                eliminate corruption, and enhance service delivery. His commitment to 
+                                ethical leadership and effective governance has set an example for others 
+                                to follow.</p>
+                        </div>
+                    </div>
+                    <div class="l-card">
+                        <div class="l-image-card">
+                            <img src="images\rg-7.JPG"/>
+                            <h1 class="latest-heading" style="color:white">Advocacy for Rural Development</h1>
+                            <p class="latest-description">Chinna Rajappa's advocacy for rural development has been a cornerstone
+                                 of his political career. He recognized the significance of uplifting 
+                                 rural communities and ensuring their holistic growth. Through his efforts, 
+                                 he championed the cause of agricultural development, rural infrastructure, 
+                                 and poverty alleviation. His initiatives aimed to bridge the gap between 
+                                 urban and rural areas, empowering the marginalized and improving their 
+                                 quality of life.</p>
+                        </div>
+                    </div>
 
 
 
-const slides = document.querySelectorAll('.slide');
-            let currentSlide = 0;
-
-            function showSlide(index) {
-                slides.forEach((slide, i) => {
-                    if (i === index) {
-                        slide.style.display = 'block';
-                    } else {
-                        slide.style.display = 'none';
-                    }
-                });
-            }
-
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % slides.length;
-                showSlide(currentSlide);
-            }
-
-            setInterval(nextSlide, 2000);
-
-            showSlide(currentSlide);
-
-
+                    <div class="l-card">
+                        <div class="l-image-card">
+                            <img src="images\rg-12.JPG"/>
+                            <h1 class="latest-heading" style="color:white">Legacy and Impact</h1>
+                            <p class="latest-description">
+                                Nimmakayala Chinna Rajappa's contributions to society have left an indelible 
+                                impact, shaping the lives of countless individuals. His dedication to public 
+                                service and his focus on inclusive development have become his enduring legacy.
+                                 Rajappa's visionary initiatives have laid the foundation for a brighter future
+                                  and continue to benefit society in numerous ways
+                            </p>
+                        </div>
+                    </div>
+                    <div class="l-card">
+                        <div class="l-image-card">
+                            <img src="images\136749766_496174774700420_1644050917513166079_n.jpg"/>
+                            <h1 class="latest-heading" style="color:white">Transformative Infrastructure Development</h1>
+                            <p class="latest-description">
+                                Through his leadership, Rajappa played a pivotal role in infrastructure development, ensuring the 
+                                growth and progress of communities. His efforts in building roads, bridges, educational institutions,
+                                 healthcare centers, and other vital infrastructure have improved connectivity and accessibility, 
+                                 boosting socio-economic development. 
+                            </p>
+                        </div>
+                    </div>
+                    
+                    
         
-const gridContainer = document.querySelector('.grid-container-1');
-const changeButton = document.getElementById('changeButton');
+                </div>
+                <div class="space"></div>
+                <div class="hide-container">
+                <div>
+                    <h1 class="latest-head-mobile" id="latestMobileContainer">Latest Activity</h1>
+                </div>
+                <div>
+                <div class="latest-container-mobile">
+                    
+                    <div class="l-card-mobile">
+                        <div class="l-image-card-mobile">
+                            <img src="images\rg-2.JPG"/>
+                            <h1 class="latest-heading-mobile" style="color:black">Impact on Society and Devolopment</h1>
+                            <p class="latest-description-mobile">Chinna Rajappa's political career has had a profound impact 
+                                on society. His relentless efforts in infrastructure 
+                                development have improved connectivity, enhancing the 
+                                socio-economic progress of communities. His focus on rural 
+                                empowerment has uplifted marginalized sections, providing them 
+                                with opportunities and resources. By championing good governance, he has 
+                                inspired a culture of transparency and accountability in public service.</p>
+                        </div>
+                    </div>
+                    <div class="l-card-mobile">
+                        <div class="l-image-card-mobile">
+                            <img src="images\FB_IMG_1690623093406.jpg"/>
+                            <h1 class="latest-heading-mobile" style="color:black">Commitment to Good Governance</h1>
+                            <p class="latest-description-mobile">Throughout his political journey, Chinna Rajappa has been a staunch 
+                                advocate for good governance and administrative reforms. He firmly 
+                                believed in transparency, accountability, and efficiency in public 
+                                administration. Rajappa introduced measures to streamline processes, 
+                                eliminate corruption, and enhance service delivery. His commitment to 
+                                ethical leadership and effective governance has set an example for others 
+                                to follow.</p>
+                        </div>
+                    </div>
+                    <div class="l-card-mobile">
+                        <div class="l-image-card-mobile">
+                            <img src="images\rg-7.JPG"/>
+                            <h1 class="latest-heading-mobile" style="color:black">Advocacy for Rural Development</h1>
+                            <p class="latest-description-mobile">Chinna Rajappa's advocacy for rural development has been a cornerstone
+                                 of his political career. He recognized the significance of uplifting 
+                                 rural communities and ensuring their holistic growth. Through his efforts, 
+                                 he championed the cause of agricultural development, rural infrastructure, 
+                                 and poverty alleviation. His initiatives aimed to bridge the gap between 
+                                 urban and rural areas, empowering the marginalized and improving their 
+                                 quality of life.</p>
+                        </div>
+                    </div>
 
-const imagePaths = [
-    'images/rg-2.jpg', 'images/rg-2.jpg', 'images/rg-2.jpg',
-    'images/rg-2.jpg', 'images/rg-2.jpg', 'images/rg-2.jpg',
-    'images/rg-2.jpg', 'images/rg-2.jpg', 'images/rg-2.jpg'
-];
+
+                    <div class="l-card-mobile">
+                        <div class="l-image-card-mobile">
+                            <img src="images\136749766_496174774700420_1644050917513166079_n.jpg"/>
+                            <h1 class="latest-heading-mobile" style="color:black">Legacy and Impact</h1>
+                            <p class="latest-description-mobile">
+                                Nimmakayala Chinna Rajappa's contributions to society have left an indelible 
+                                impact, shaping the lives of countless individuals. His dedication to public 
+                                service and his focus on inclusive development have become his enduring legacy.
+                                 Rajappa's visionary initiatives have laid the foundation for a brighter future 
+                                 and continue to benefit society in numerous ways
+                            </p>
+                        </div>
+                    </div>
+                    <div class="l-card-mobile">
+                        <div class="l-image-card-mobile">
+                            <img src="images\WhatsApp Image 2023-07-28 at 10.03.05 AM (1).jpeg"/>
+                            <h1 class="latest-heading-mobile" style="color:black">Transformative Infrastructure Development</h1>
+                            <p class="latest-description-mobile">
+                                Through his leadership, Rajappa played a pivotal role in infrastructure development, 
+                                ensuring the growth and progress of communities. His efforts in building roads, bridges, 
+                                educational institutions, healthcare centers, and other vital infrastructure have improved 
+                                connectivity and accessibility, boosting socio-economic development. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            </div>
 
 
 
 
 
-changeButton.addEventListener('click', () => {
-    const gridItems = document.querySelectorAll('.grid-item-1 img');
+
+            <div class="display-side-line"></div>
+        <div class="gallery-mobile-block" id="galleryContainer">
+        <div>
+            
+            <h1 class="gallery-heading">PHOTO GALLERY</h1>
+            <p class="gallery-para">See moore about our N.Chinarajappa Activities</p>
+        </div>
+        <div>
+            <div class="gallery-row-flex-container">
+                <div class="gallery-card-container">
+                    <img src="images\DSC_0613.jpg" class="gallery-images"/>
+                    <div class="gallery-para-card"><p>Rajappa meets central home minister</p></div>
+                </div>
+                <div class="gallery-card-container">
+                    <img src="images\06-VJ-CHINARAJAPPA (1).jpg" class="gallery-images"/>
+                    <div class="gallery-para-card"><p>Rajappa meets central home minister</p></div>
+                </div>
+                <div class="gallery-card-container">
+                    <img src="images\800px-thumbnail.jpg" class="gallery-images"/>
+                    <div class="gallery-para-card"><p>Rajappa meets central home minister</p></div>
+                </div>
+                <div class="gallery-card-container">
+                    <img src="images\6189_rajjappa.jpg" class="gallery-images"/>
+                    <div class="gallery-para-card"><p>Rajappa meets central home minister</p></div>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-row-flex-container">
+                <div class="gallery-card-container">
+                    <img src="images\6942_Deputy-CM-Chinarajappa-addr.jpg" class="gallery-images"/>
+                    <div class="gallery-para-card"><p>Rajappa meets central home minister</p></div>
+                </div>
+                <div class="gallery-card-container">
+                    <img src="images\7500_Deputy CM Chinarajappa.jpg" class="gallery-images"/>
+                    <div class="gallery-para-card"><p>Rajappa meets central home minister</p></div>
+                </div>
+                <div class="gallery-card-container">
+                    <img src="images\48371464_2315959675103700_6963257424182509568_o.jpg" class="gallery-images"/>
+                    <div class="gallery-para-card"><p>Rajappa meets central home minister</p></div>
+                </div>
+                <div class="gallery-card-container">
+                    <img src="images\55961811_2485787354787597_1760917706388799488_o.jpg" class="gallery-images"/>
+                    <div class="gallery-para-card"><p>Rajappa meets central home minister</p></div>
+                </div>
+
+            </div>
+
+
+            <div class="gallery-row-flex-container">
+                <div class="gallery-card-container">
+                    <img src="images\136749766_496174774700420_1644050917513166079_n.jpg" class="gallery-images"/>
+                    <div class="gallery-para-card"><p>Rajappa meets central home minister</p></div>
+                </div>
+                <div class="gallery-card-container">
+                    <img src="images\dc-Cover-5labqo4vq8014i14i34anv2eg5-20160505063829.Medi.jpeg" class="gallery-images"/>
+                    <div class="gallery-para-card"><p>Rajappa meets central home minister</p></div>
+                </div>
+                <div class="gallery-card-container">
+                    <img src="images\DY_CM_7_9366.jpg" class="gallery-images"/>
+                    <div class="gallery-para-card"><p>Rajappa meets central home minister</p></div>
+                </div>
+                <div class="gallery-card-container">
+                    <img src="images\rg-9.JPG" class="gallery-images"/>
+                    <div class="gallery-para-card"><p>Rajappa meets central home minister</p></div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
     
-    gridItems.forEach((img, index) => {
-        img.style.opacity = 0; // Start with opacity 0
-        
-        setTimeout(() => {
-            img.src = imagePaths[index];
+
+
+
+
+
+            <div class="gallery-mobile" id="galleryMobileContainer">
+                <div>
             
-            // Apply fade-in transition effect
-            img.style.transition = 'opacity 0.5s';
-            img.style.opacity = 1;
-        }, index * 100); // Delay each image by 100ms
-    });
-});
+                    <h1 class="gallery-heading-mobile">PHOTO GALLERY</h1>
+                    <p class="gallery-para-mobile">See moore about our N.Chinarajappa Activities</p>
+                </div>
+                <div>
+                    <div class="gallery-row-flex-container-mobile">
+                        <div class="gallery-card-container-mobile">
+                            <img src="images\DSC_0613.jpg" class="gallery-images-mobile"/>
+                            <div class="gallery-para-card-mobile"><p style="font-size: 10px;">Rajappa meets central home minister</p></div>
+                        </div>
+                        <div class="gallery-card-container-mobile">
+                            <img src="images\06-VJ-CHINARAJAPPA (1).jpg" class="gallery-images-mobile"/>
+                            <div class="gallery-para-card-mobile"><p style="font-size: 10px;">Rajappa meets central home minister</p></div>
+                        </div>
+                        <div class="gallery-card-container-mobile">
+                            <img src="images\800px-thumbnail.jpg" class="gallery-images-mobile"/>
+                            <div class="gallery-para-card-mobile"><p style="font-size: 10px;">Rajappa meets central home minister</p></div>
+                        </div>
+                        </div>
 
-const imagePathss = [
-"images/rg-3.jpg", 'images/dc-Cover-5labqo4vq8014i14i34anv2eg5-20160505063829.Medi.jpeg', 'images/DSC_0613.jpg',
-    'images/FB_IMG_1690623093406.jpg', 'images/rajappacy.jpg', 'images/rg-2.JPG',
-    'images/rg-7.jpg', 'images/rg-8.jpg', 'images/rg-10.jpg'
-];
+                        <div class="gallery-row-flex-container-mobile">
+                            <div class="gallery-card-container-mobile">
+                                <img src="images\6942_Deputy-CM-Chinarajappa-addr.jpg" class="gallery-images-mobile"/>
+                                <div class="gallery-para-card-mobile"><p style="font-size: 10px;">Rajappa meets central home minister</p></div>
+                            </div>
+                            <div class="gallery-card-container-mobile">
+                                <img src="images\7500_Deputy CM Chinarajappa.jpg" class="gallery-images-mobile"/>
+                                <div class="gallery-para-card-mobile"><p style="font-size: 10px;">Rajappa meets central home minister</p></div>
+                            </div>
+                            <div class="gallery-card-container-mobile">
+                                <img src="images\48371464_2315959675103700_6963257424182509568_o.jpg" class="gallery-images-mobile"/>
+                                <div class="gallery-para-card-mobile"><p style="font-size: 10px;">Rajappa meets central home minister</p></div>
+                            </div>
+                            </div>
 
-const changeButtonA = document.getElementById('changeButtonA');
 
-changeButtonA.addEventListener('click', () => {
-    const gridItems = document.querySelectorAll('.grid-item-1 img');
+                            <div class="gallery-row-flex-container-mobile">
+                                <div class="gallery-card-container-mobile">
+                                    <img src="images\6942_Deputy-CM-Chinarajappa-addr.jpg" class="gallery-images-mobile"/>
+                                    <div class="gallery-para-card-mobile"><p style="font-size: 10px;">Rajappa meets central home minister</p></div>
+                                </div>
+                                <div class="gallery-card-container-mobile">
+                                    <img src="images\7500_Deputy CM Chinarajappa.jpg" class="gallery-images-mobile"/>
+                                    <div class="gallery-para-card-mobile"><p style="font-size: 10px;">Rajappa meets central home minister</p></div>
+                                </div>
+                                <div class="gallery-card-container-mobile">
+                                    <img src="images\48371464_2315959675103700_6963257424182509568_o.jpg" class="gallery-images-mobile"/>
+                                    <div class="gallery-para-card-mobile"><p style="font-size: 10px;">Rajappa meets central home minister</p></div>
+                                </div>
+                                </div>
+
+
+                                <div class="gallery-row-flex-container-mobile">
+                                    <div class="gallery-card-container-mobile">
+                                        <img src="images\6942_Deputy-CM-Chinarajappa-addr.jpg" class="gallery-images-mobile"/>
+                                        <div class="gallery-para-card-mobile"><p style="font-size: 10px;">Rajappa meets central home minister</p></div>
+                                    </div>
+                                    <div class="gallery-card-container-mobile">
+                                        <img src="images\7500_Deputy CM Chinarajappa.jpg" class="gallery-images-mobile"/>
+                                        <div class="gallery-para-card-mobile"><p style="font-size: 10px;">Rajappa meets central home minister</p></div>
+                                    </div>
+                                    <div class="gallery-card-container-mobile">
+                                        <img src="images\48371464_2315959675103700_6963257424182509568_o.jpg" class="gallery-images-mobile"/>
+                                        <div class="gallery-para-card-mobile"><p style="font-size: 10px;">Rajappa meets central home minister</p></div>
+                                    </div>
+                                    </div>
+                                     </div>
+                                    </div>
+                                    
+
+
+
+
+
+            <div class="social-container" id="socialContainer">
+                <h1 style="color: rgb(241, 243, 132);">Social Media</h1>
+                <p class="social-para" style="color: rgb(241, 243, 132);">It is a long established fact that a reader will be distracted by the readable content of a page</p>
+                <div class="social-icons-flex">
+                <div class="facebook-icon">
+                    <div>
+                    <i class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i>
+                </div>
+                
+            </div>
+                <div class="twitter-icon">
+                    <div>
+                    <img src="images\twitter.jpg" class="twitter-img"/>
+                    
+                    
+                </div>
+               
+            </div>
+                <div class="instagram-icon">
+                    <div>
+                    <i class="fab fa-instagram fa-2x" style="color: #ac2bac;"></i>
+                    
+                </div>
+
+            </div>
+                
+                </div>
+                <div class="social-icons-container-flex">
+                    <div class="facebook-container">
+                        <div class="fb-url">
+                        <a href="https://www.facebook.com/people/China-Rajappa-Nimmakayala/100050506418754/" target="_blank"><i class="fab fb-icon fa-facebook-f "style="color: #3b5998;"></i></a>
+                        <a href="https://www.facebook.com/people/China-Rajappa-Nimmakayala/100050506418754/" class="icon-link">View Posts on Facebook</a>
+                    </div>
+                    </div>
+                    <div class="twitter-container">
+                        <div class="fb-url">
+                            <a href="https://twitter.com/ChinarajappaN?t=MXxjJP-4yD2hBcy77eIGZw&s=08" target="_blank"><image src="images\twitter.jpg" class="twitter-logo"/></a>
+                            <a href="https://twitter.com/ChinarajappaN?t=MXxjJP-4yD2hBcy77eIGZw&s=08" class="icon-link">View Posts on Twitter</a>
+                        </div>
+                    </div>
+                    <div class="instagram-container">
+                        <div class="fb-url">
+                            <a href="https://www.facebook.com/people/China-Rajappa-Nimmakayala/100050506418754/" target="_blank"><i class="fab fb-icon fa-instagram fa-2x" style="color: #ac2bac;"></i>
+                            <a href="https://www.facebook.com/people/China-Rajappa-Nimmakayala/100050506418754/" class="icon-link">View Posts on Instagram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="height"></div>
+            <div class="end-container">
+                <p style="text-align: center; font-family: sans-serif;">Get Exclusive News and Updates</p>
     
-    gridItems.forEach((img, index) => {
-        img.style.opacity = 0; // Start with opacity 0
-        
-        setTimeout(() => {
-            img.src = imagePathss[index];
-            
-            // Apply fade-in transition effect
-            img.style.transition = 'opacity 0.5s';
-            img.style.opacity = 1;
-        }, index * 100); // Delay each image by 100ms
-    });
-});
-
-  
-    const btn1=document.getElementById("btn1");
-    const spanShow=document.getElementById("spanShow");
-
-         btn1.addEventListener("click", () => {
-    if (spanShow.style.display === "block") {
-        spanShow.style.display = "none";
-        btn1.textContent = "Read More";
-    } else {
-        spanShow.style.display = "block";
-        btn1.textContent = "Read Less";
-    }
-});
-
-    const btn2=document.getElementById("btn2");
-    const spanShow2=document.getElementById("spanShow2");
-
-         btn2.addEventListener("click", () => {
-    if (spanShow2.style.display === "block") {
-        spanShow2.style.display = "none";
-        btn2.textContent = "Read More";
-    } else {
-        spanShow2.style.display = "block";
-        btn2.textContent = "Read Less";
-    }
-});
-
-
-    const btn3=document.getElementById("btn3");
-    const spanShow3=document.getElementById("spanShow3");
-
-         btn3.addEventListener("click", () => {
-    if (spanShow3.style.display === "block") {
-        spanShow3.style.display = "none";
-        btn3.textContent = "Read More";
-    } else {
-        spanShow3.style.display = "block";
-        btn3.textContent = "Read Less";
-    }
-});
-
-
-    const btn4=document.getElementById("btn4");
-    const spanShow4=document.getElementById("spanShow4");
-
-         btn4.addEventListener("click", () => {
-    if (spanShow4.style.display === "block") {
-        spanShow4.style.display = "none";
-        btn4.textContent = "Read More";
-    } else {
-        spanShow4.style.display = "block";
-        btn4.textContent = "Read Less";
-    }
-});
+                <div class="end-logo-title-container">
+                    <div class="end-image-flex">
+                    <img src="https://m.media-amazon.com/images/I/71VRd3FvgRL._AC_UF1000,1000_QL80_.jpg" class="end-image"/>
+                    <h1>N Chinarajappa</h1>
+                    </div>
+                        <div class="center">
+                            <div id="social-test">
+                            <ul class="social">
+                              <li type="none" class="li-1"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                              <li type="none" class="li-1"><i class="fa fa-twitter" aria-hidden="true"></i>
+                            </li>
+                              <li type="none" class="li-1"><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                            </ul>
+                            </div>
+                        </div>
+    
+    
+                <div class="quick-links-container">
+                <h1>Quick Links</h1>
+                <a href="" class="quick-link">Home</a>
+                <a href="" class="quick-link">Biography</a>
+                <a href="" class="quick-link">Latest Activities</a>
+                <a href="" class="quick-link">Gallery</a>
+                <a href="" class="quick-link">Social Media</a>
+    
+                </div>
+                
+                </div>
+    
+                <p style="text-align: center; font-family: cursive;">Copyright <span>&copy</span> 2023 Nimmakayala Chinarajappa all rights reserved.</p>
+    
+            </div>
 
 
 
-
-
-            
-
-
-
-
-            let slideIndex = [1,1];
-            let slideId = ["mySlides1", "mySlides2"]
-            showSlides(1, 0);
-            showSlides(1, 1);
-            
-            function plusSlides(n, no) {
-              showSlides(slideIndex[no] += n, no);
-            }
-            
-            function showSlides(n, no) {
-              let i;
-              let x = document.getElementsByClassName(slideId[no]);
-              if (n > x.length) {slideIndex[no] = 1}    
-              if (n < 1) {slideIndex[no] = x.length}
-              for (i = 0; i < x.length; i++) {
-                 x[i].style.display = "none";  
-              }
-              x[slideIndex[no]-1].style.display = "block";  
-            }
-
-
-            function toggleDropdown() {
-            var dropdownContent = document.getElementById("myDropdown");
-            if (dropdownContent.style.display === "block") {
-                dropdownContent.style.display = "none";
-            } else {
-                dropdownContent.style.display = "block";
-            }
-            } 
-
-
-
-            
-            
-
-
-
-            
-
-
-            </script>
+            <div class="end-container-mobile">
+                <p style="text-align: center; font-family: sans-serif; font-size: 12px;">Get Exclusive News and Updates</p>
+    
+                <div class="end-logo-title-container-mobile">
+                    <div class="end-image-flex-mobile">
+                    <img src="https://m.media-amazon.com/images/I/71VRd3FvgRL._AC_UF1000,1000_QL80_.jpg" class="end-image-mobile"/>
+                    <h1 style="font-size: 15px;">N Chinarajappa</h1>
+                    </div>
+                        <div class="center-mobile" style="margin-top: 50px;">
+                            <div id="social-test-mobile">
+                            <ul class="social-mobile">
+                              <li type="none" class="li-1"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                              <li type="none" class="li-1"><i class="fa fa-twitter" aria-hidden="true"></i>
+                            </li>
+                              <li type="none" class="li-1"><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                            </ul>
+                            </div>
+                        </div>
+    
+    
+                <div class="quick-links-container-mobile"  style="font-size: 10px;">
+                <h1 style="font-size:15px;">Quick Links</h1>
+                <a href="" class="quick-link-mobile">Home</a>
+                <a href="" class="quick-link-mobile">Biography</a>
+                <a href="" class="quick-link-mobile">Latest Activities</a>
+                <a href="" class="quick-link-mobile">Gallery</a>
+                <a href="" class="quick-link-mobile">Social Media</a>
+    
+                </div>
+                
+                </div>
+    
+                <p style="text-align: center; font-family: cursive;">Copyright <span>&copy</span> 2023 Nimmakayala Chinarajappa all rights reserved.</p>
+    
+            </div>
 
             
 
 
 
 
+                <script>
+    
+                    const image = document.querySelector(".rajappa-new");
+                    const quotes = document.querySelectorAll(".quote-container");
+                    
+                    image.addEventListener("animationend", function() {
+                      quotes.forEach((quote, index) => {
+                        setTimeout(() => {
+                          quote.classList.add("show-quote");
+                        }, index * 2000);
+                      });
+                    });
 
 
-
-
-              
-
-
-    </body>
+                    function toggleDropdown() {
+                        var dropdownContent = document.getElementById("myDropdown");
+                        if (dropdownContent.style.display === "block") {
+                            dropdownContent.style.display = "none";
+                        } else {
+                            dropdownContent.style.display = "block";
+                        }
+                        }   
+                  </script>
+        </body>
+    </head>
 </html>
